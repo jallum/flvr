@@ -185,7 +185,40 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array/>
+	<array>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>968A07C50BE289A8001F830D</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>postflight</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>968A07C60BE289A8001F830D</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>postflight</string>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {1337, 781}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>80 51 1337 822 0 0 1440 878 </string>
+			</dict>
+		</dict>
+	</array>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>1375</integer>
@@ -321,7 +354,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>968A07C10BE286F2001F830D</string>
+										<string>968A07C30BE289A8001F830D</string>
 										<key>history</key>
 										<array>
 											<string>968A070D0BE2830E001F830D</string>
@@ -560,7 +593,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>968A07C20BE286F2001F830D</string>
+										<string>968A07C40BE289A8001F830D</string>
 										<key>history</key>
 										<array>
 											<string>968A07060BE282F8001F830D</string>
@@ -882,6 +915,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>968A07C50BE289A8001F830D</string>
 		<string>/Users/jason/Desktop/Projects/FLVR/FLVR.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
