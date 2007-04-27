@@ -1,0 +1,32 @@
+"This beta of FLVR has been corrupted.  A new beta - or possibly the final release - can be found on the TastyApps website.  Would you like to go there now?" = 
+    "Diese Beta-Version von FLVR ist beschädigt. Eine neue Beta-Version - vielleicht auch schon die Endversion - kann auf der TastyApps Webseite gefunden werden. Möchten Sie jetzt dorthin gehen?";
+
+"This beta of FLVR has expired.  A new beta - or possibly the final release - can be found on the TastyApps website.  Would you like to go there now?" = 
+    "Diese Beta-Version von FLVR ist abgelaufen.  Eine neue Beta-Version - oder vielleicht sogar die finale Version - finden Sie auf der TastyApps Webseite.  Möchten Sie die Seite jetzt besuchen?";
+
+/*  When audio or video is "not available"  */
+"N/A" = "N/A";
+
+/*  frames per second  */
+"fps" = "fps"; 
+
+/*  audio channels - mono is single channel  */
+"Mono" = "Mono";
+
+/*  audio channels - stereo is two-channel */
+"Stereo" = "Stereo";
+
+/*  Abbreviation for kilohertz, the number of samples per second.  */
+"kHz" = "kHz";
+
+/*  Tooltip message */
+"FLVR - Download Flash Video" = "FLVR - Flash Video downloaden";
+
+/*  Menu Selection */
+"Show FLVR..." = "Show FLVR...";
+
+/*  Window Footer  */
+"visit tastyapps.com for more tasty mac treats" = "besuchen sie tastyapps.com für weitere leckereien";
+
+/*  Window Buttons  */
+"Close" = "Schließen";

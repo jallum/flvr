@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		968A06880BE28102001F830D /* NSBezierPath+TastyApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A06620BE28101001F830D /* NSBezierPath+TastyApps.m */; };
+		968A06890BE28102001F830D /* NSImage+TastyApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A06650BE28101001F830D /* NSImage+TastyApps.m */; };
+		968A068A0BE28102001F830D /* NSURLConnection+FLVR.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A06690BE28101001F830D /* NSURLConnection+FLVR.m */; };
+		968A068B0BE28102001F830D /* ToolbarController+FLVR.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A066B0BE28101001F830D /* ToolbarController+FLVR.m */; };
+		968A068C0BE28102001F830D /* FLVR.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A066D0BE28101001F830D /* FLVR.m */; };
+		968A068D0BE28102001F830D /* FLVRNowPlayingWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A066F0BE28101001F830D /* FLVRNowPlayingWindowController.m */; };
+		968A068E0BE28102001F830D /* FLVROptionsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A06710BE28101001F830D /* FLVROptionsWindowController.m */; };
+		968A068F0BE28102001F830D /* FLVRVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A06730BE28101001F830D /* FLVRVideo.m */; };
+		968A06900BE28102001F830D /* FLVRVideoInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A06760BE28101001F830D /* FLVRVideoInterceptor.m */; };
+		968A06910BE28102001F830D /* FLVRBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A067B0BE28101001F830D /* FLVRBarButton.m */; };
+		968A06920BE28102001F830D /* FLVRNowPlayingPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A067D0BE28101001F830D /* FLVRNowPlayingPanel.m */; };
+		968A06930BE28102001F830D /* FLVRNowPlayingPanelThemeFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A067F0BE28101001F830D /* FLVRNowPlayingPanelThemeFrame.m */; };
+		968A06940BE28102001F830D /* FLVRNowPlayingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A06810BE28102001F830D /* FLVRNowPlayingView.m */; };
+		968A06950BE28102001F830D /* FLVRPulseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A06830BE28102001F830D /* FLVRPulseButton.m */; };
+		968A06960BE28102001F830D /* FLVRScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A06850BE28102001F830D /* FLVRScrollView.m */; };
+		968A06970BE28102001F830D /* FLVRVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A06870BE28102001F830D /* FLVRVideoCell.m */; };
+		968A06D20BE28157001F830D /* Cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A069C0BE28157001F830D /* Cancel.png */; };
+		968A06D50BE28157001F830D /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 968A06A20BE28157001F830D /* defaults.plist */; };
+		968A06D60BE28157001F830D /* Download.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A06A30BE28157001F830D /* Download.png */; };
+		968A06DA0BE28157001F830D /* ffmpeg in Resources */ = {isa = PBXBuildFile; fileRef = 968A06AC0BE28157001F830D /* ffmpeg */; };
+		968A06DB0BE28157001F830D /* FLVR.icns in Resources */ = {isa = PBXBuildFile; fileRef = 968A06AD0BE28157001F830D /* FLVR.icns */; };
+		968A06E20BE28157001F830D /* license.plist in Resources */ = {isa = PBXBuildFile; fileRef = 968A06BD0BE28157001F830D /* license.plist */; };
+		968A06E30BE28157001F830D /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A06BE0BE28157001F830D /* Logo.png */; };
+		968A06E40BE28157001F830D /* LogoDesaturated.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A06BF0BE28157001F830D /* LogoDesaturated.png */; };
+		968A06E50BE28157001F830D /* NameAndVersion.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A06C00BE28157001F830D /* NameAndVersion.png */; };
+		968A06E80BE28157001F830D /* Old Options.nib in Resources */ = {isa = PBXBuildFile; fileRef = 968A06C60BE28157001F830D /* Old Options.nib */; };
+		968A06E90BE28157001F830D /* Options.nib in Resources */ = {isa = PBXBuildFile; fileRef = 968A06C70BE28157001F830D /* Options.nib */; };
+		968A06EA0BE28157001F830D /* RevealInFinder.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A06C80BE28157001F830D /* RevealInFinder.png */; };
+		968A06ED0BE28157001F830D /* Toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A06CE0BE28157001F830D /* Toolbar.png */; };
+		968A06EE0BE28157001F830D /* ToolbarPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A06CF0BE28157001F830D /* ToolbarPressed.png */; };
+		968A06EF0BE28157001F830D /* WarningLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A06D00BE28157001F830D /* WarningLeft.png */; };
+		968A06F00BE28157001F830D /* WarningRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A06D10BE28157001F830D /* WarningRight.png */; };
+		968A072F0BE28378001F830D /* CTGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A072E0BE28378001F830D /* CTGradient.m */; };
+		968A075D0BE28495001F830D /* NowPlaying.nib in Resources */ = {isa = PBXBuildFile; fileRef = 968A075B0BE28495001F830D /* NowPlaying.nib */; };
+		968A07600BE284A0001F830D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 968A075E0BE284A0001F830D /* Localizable.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		8D5B49B6048680CD000E48DA /* FLVR.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FLVR.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		968A06620BE28101001F830D /* NSBezierPath+TastyApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+TastyApps.m"; sourceTree = "<group>"; };
+		968A06630BE28101001F830D /* NSFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFrameView.h; sourceTree = "<group>"; };
+		968A06640BE28101001F830D /* NSImage+TastyApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+TastyApps.h"; sourceTree = "<group>"; };
+		968A06650BE28101001F830D /* NSImage+TastyApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+TastyApps.m"; sourceTree = "<group>"; };
+		968A06660BE28101001F830D /* NSThemeFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSThemeFrame.h; sourceTree = "<group>"; };
+		968A06670BE28101001F830D /* NSTitledFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTitledFrame.h; sourceTree = "<group>"; };
+		968A06680BE28101001F830D /* NSURLConnection+FLVR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLConnection+FLVR.h"; sourceTree = "<group>"; };
+		968A06690BE28101001F830D /* NSURLConnection+FLVR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLConnection+FLVR.m"; sourceTree = "<group>"; };
+		968A066A0BE28101001F830D /* ToolbarController+FLVR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ToolbarController+FLVR.h"; sourceTree = "<group>"; };
+		968A066B0BE28101001F830D /* ToolbarController+FLVR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ToolbarController+FLVR.m"; sourceTree = "<group>"; };
+		968A066C0BE28101001F830D /* FLVR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLVR.h; sourceTree = "<group>"; };
+		968A066D0BE28101001F830D /* FLVR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLVR.m; sourceTree = "<group>"; };
+		968A066E0BE28101001F830D /* FLVRNowPlayingWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLVRNowPlayingWindowController.h; sourceTree = "<group>"; };
+		968A066F0BE28101001F830D /* FLVRNowPlayingWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLVRNowPlayingWindowController.m; sourceTree = "<group>"; };
+		968A06700BE28101001F830D /* FLVROptionsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLVROptionsWindowController.h; sourceTree = "<group>"; };
+		968A06710BE28101001F830D /* FLVROptionsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLVROptionsWindowController.m; sourceTree = "<group>"; };
+		968A06720BE28101001F830D /* FLVRVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLVRVideo.h; sourceTree = "<group>"; };
+		968A06730BE28101001F830D /* FLVRVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLVRVideo.m; sourceTree = "<group>"; };
+		968A06740BE28101001F830D /* FLVRVideo+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FLVRVideo+Private.h"; sourceTree = "<group>"; };
+		968A06750BE28101001F830D /* FLVRVideoInterceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLVRVideoInterceptor.h; sourceTree = "<group>"; };
+		968A06760BE28101001F830D /* FLVRVideoInterceptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLVRVideoInterceptor.m; sourceTree = "<group>"; };
+		968A06770BE28101001F830D /* FLVRVideoInterceptor+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FLVRVideoInterceptor+Private.h"; sourceTree = "<group>"; };
+		968A06780BE28101001F830D /* Safari.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Safari.h; path = Source/Safari.h; sourceTree = "<group>"; };
+		968A067A0BE28101001F830D /* FLVRBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLVRBarButton.h; sourceTree = "<group>"; };
+		968A067B0BE28101001F830D /* FLVRBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLVRBarButton.m; sourceTree = "<group>"; };
+		968A067C0BE28101001F830D /* FLVRNowPlayingPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLVRNowPlayingPanel.h; sourceTree = "<group>"; };
+		968A067D0BE28101001F830D /* FLVRNowPlayingPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLVRNowPlayingPanel.m; sourceTree = "<group>"; };
+		968A067E0BE28101001F830D /* FLVRNowPlayingPanelThemeFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLVRNowPlayingPanelThemeFrame.h; sourceTree = "<group>"; };
+		968A067F0BE28101001F830D /* FLVRNowPlayingPanelThemeFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLVRNowPlayingPanelThemeFrame.m; sourceTree = "<group>"; };
+		968A06800BE28101001F830D /* FLVRNowPlayingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLVRNowPlayingView.h; sourceTree = "<group>"; };
+		968A06810BE28102001F830D /* FLVRNowPlayingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLVRNowPlayingView.m; sourceTree = "<group>"; };
+		968A06820BE28102001F830D /* FLVRPulseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLVRPulseButton.h; sourceTree = "<group>"; };
+		968A06830BE28102001F830D /* FLVRPulseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLVRPulseButton.m; sourceTree = "<group>"; };
+		968A06840BE28102001F830D /* FLVRScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLVRScrollView.h; sourceTree = "<group>"; };
+		968A06850BE28102001F830D /* FLVRScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLVRScrollView.m; sourceTree = "<group>"; };
+		968A06860BE28102001F830D /* FLVRVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLVRVideoCell.h; sourceTree = "<group>"; };
+		968A06870BE28102001F830D /* FLVRVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLVRVideoCell.m; sourceTree = "<group>"; };
+		968A069C0BE28157001F830D /* Cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cancel.png; sourceTree = "<group>"; };
+		968A06A20BE28157001F830D /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = defaults.plist; sourceTree = "<group>"; };
+		968A06A30BE28157001F830D /* Download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Download.png; sourceTree = "<group>"; };
+		968A06AC0BE28157001F830D /* ffmpeg */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = ffmpeg; sourceTree = "<group>"; };
+		968A06AD0BE28157001F830D /* FLVR.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = FLVR.icns; sourceTree = "<group>"; };
+		968A06BD0BE28157001F830D /* license.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = license.plist; sourceTree = "<group>"; };
+		968A06BE0BE28157001F830D /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		968A06BF0BE28157001F830D /* LogoDesaturated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoDesaturated.png; sourceTree = "<group>"; };
+		968A06C00BE28157001F830D /* NameAndVersion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NameAndVersion.png; sourceTree = "<group>"; };
+		968A06C60BE28157001F830D /* Old Options.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = "Old Options.nib"; sourceTree = "<group>"; };
+		968A06C70BE28157001F830D /* Options.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = Options.nib; sourceTree = "<group>"; };
+		968A06C80BE28157001F830D /* RevealInFinder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RevealInFinder.png; sourceTree = "<group>"; };
+		968A06CE0BE28157001F830D /* Toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Toolbar.png; sourceTree = "<group>"; };
+		968A06CF0BE28157001F830D /* ToolbarPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ToolbarPressed.png; sourceTree = "<group>"; };
+		968A06D00BE28157001F830D /* WarningLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WarningLeft.png; sourceTree = "<group>"; };
+		968A06D10BE28157001F830D /* WarningRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WarningRight.png; sourceTree = "<group>"; };
+		968A07020BE282C4001F830D /* NSBezierPath+TastyApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBezierPath+TastyApps.h"; sourceTree = "<group>"; };
+		968A072D0BE28378001F830D /* CTGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTGradient.h; sourceTree = "<group>"; };
+		968A072E0BE28378001F830D /* CTGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTGradient.m; sourceTree = "<group>"; };
+		968A075C0BE28495001F830D /* de */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = de; path = de.lproj/NowPlaying.nib; sourceTree = "<group>"; };
+		968A075F0BE284A0001F830D /* de */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		968A07650BE284AA001F830D /* en */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = en; path = en.lproj/NowPlaying.nib; sourceTree = "<group>"; };
+		968A076C0BE284B2001F830D /* es */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = es; path = es.lproj/NowPlaying.nib; sourceTree = "<group>"; };
+		968A07710BE284B7001F830D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		968A07720BE284BF001F830D /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/NowPlaying.nib; sourceTree = "<group>"; };
+		968A07730BE284C4001F830D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		968A07740BE284CA001F830D /* ja */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = ja; path = ja.lproj/NowPlaying.nib; sourceTree = "<group>"; };
+		968A077D0BE284CF001F830D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		968A077E0BE284D5001F830D /* ko */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = ko; path = ko.lproj/NowPlaying.nib; sourceTree = "<group>"; };
+		968A07830BE284DB001F830D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		968A07840BE284E1001F830D /* nl */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = nl; path = nl.lproj/NowPlaying.nib; sourceTree = "<group>"; };
+		968A07850BE284E5001F830D /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		968A07860BE284EF001F830D /* sv */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = sv; path = sv.lproj/NowPlaying.nib; sourceTree = "<group>"; };
+		968A07870BE284F5001F830D /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D5B49B3048680CD000E48DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* FLVR */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AFFE84173DC02AAC07 /* Source */,
+				32C88E010371C26100C91783 /* Other Sources */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+			);
+			name = FLVR;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
+				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
+			);
+			name = "Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				968A075E0BE284A0001F830D /* Localizable.strings */,
+				968A075B0BE28495001F830D /* NowPlaying.nib */,
+				968A069C0BE28157001F830D /* Cancel.png */,
+				968A06A20BE28157001F830D /* defaults.plist */,
+				968A06A30BE28157001F830D /* Download.png */,
+				968A06AC0BE28157001F830D /* ffmpeg */,
+				968A06AD0BE28157001F830D /* FLVR.icns */,
+				968A06BD0BE28157001F830D /* license.plist */,
+				968A06BE0BE28157001F830D /* Logo.png */,
+				968A06BF0BE28157001F830D /* LogoDesaturated.png */,
+				968A06C00BE28157001F830D /* NameAndVersion.png */,
+				968A06C60BE28157001F830D /* Old Options.nib */,
+				968A06C70BE28157001F830D /* Options.nib */,
+				968A06C80BE28157001F830D /* RevealInFinder.png */,
+				968A06CE0BE28157001F830D /* Toolbar.png */,
+				968A06CF0BE28157001F830D /* ToolbarPressed.png */,
+				968A06D00BE28157001F830D /* WarningLeft.png */,
+				968A06D10BE28157001F830D /* WarningRight.png */,
+				8D5B49B7048680CD000E48DA /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				968A06600BE28101001F830D /* 3rd Party */,
+				968A06610BE28101001F830D /* Additions */,
+				968A06790BE28101001F830D /* Views */,
+				968A066C0BE28101001F830D /* FLVR.h */,
+				968A066D0BE28101001F830D /* FLVR.m */,
+				968A066E0BE28101001F830D /* FLVRNowPlayingWindowController.h */,
+				968A066F0BE28101001F830D /* FLVRNowPlayingWindowController.m */,
+				968A06700BE28101001F830D /* FLVROptionsWindowController.h */,
+				968A06710BE28101001F830D /* FLVROptionsWindowController.m */,
+				968A06720BE28101001F830D /* FLVRVideo.h */,
+				968A06730BE28101001F830D /* FLVRVideo.m */,
+				968A06740BE28101001F830D /* FLVRVideo+Private.h */,
+				968A06750BE28101001F830D /* FLVRVideoInterceptor.h */,
+				968A06760BE28101001F830D /* FLVRVideoInterceptor.m */,
+				968A06770BE28101001F830D /* FLVRVideoInterceptor+Private.h */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7AEFEA557BF11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				089C167FFE841241C02AAC07 /* AppKit.framework */,
+				D2F7E65807B2D6F200F64583 /* CoreData.framework */,
+				089C1672FE841209C02AAC07 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D5B49B6048680CD000E48DA /* FLVR.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32C88E010371C26100C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				968A06780BE28101001F830D /* Safari.h */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		968A06600BE28101001F830D /* 3rd Party */ = {
+			isa = PBXGroup;
+			children = (
+				968A072D0BE28378001F830D /* CTGradient.h */,
+				968A072E0BE28378001F830D /* CTGradient.m */,
+			);
+			path = "3rd Party";
+			sourceTree = "<group>";
+		};
+		968A06610BE28101001F830D /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				968A07020BE282C4001F830D /* NSBezierPath+TastyApps.h */,
+				968A06620BE28101001F830D /* NSBezierPath+TastyApps.m */,
+				968A06630BE28101001F830D /* NSFrameView.h */,
+				968A06640BE28101001F830D /* NSImage+TastyApps.h */,
+				968A06650BE28101001F830D /* NSImage+TastyApps.m */,
+				968A06660BE28101001F830D /* NSThemeFrame.h */,
+				968A06670BE28101001F830D /* NSTitledFrame.h */,
+				968A06680BE28101001F830D /* NSURLConnection+FLVR.h */,
+				968A06690BE28101001F830D /* NSURLConnection+FLVR.m */,
+				968A066A0BE28101001F830D /* ToolbarController+FLVR.h */,
+				968A066B0BE28101001F830D /* ToolbarController+FLVR.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		968A06790BE28101001F830D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				968A067A0BE28101001F830D /* FLVRBarButton.h */,
+				968A067B0BE28101001F830D /* FLVRBarButton.m */,
+				968A067C0BE28101001F830D /* FLVRNowPlayingPanel.h */,
+				968A067D0BE28101001F830D /* FLVRNowPlayingPanel.m */,
+				968A067E0BE28101001F830D /* FLVRNowPlayingPanelThemeFrame.h */,
+				968A067F0BE28101001F830D /* FLVRNowPlayingPanelThemeFrame.m */,
+				968A06800BE28101001F830D /* FLVRNowPlayingView.h */,
+				968A06810BE28102001F830D /* FLVRNowPlayingView.m */,
+				968A06820BE28102001F830D /* FLVRPulseButton.h */,
+				968A06830BE28102001F830D /* FLVRPulseButton.m */,
+				968A06840BE28102001F830D /* FLVRScrollView.h */,
+				968A06850BE28102001F830D /* FLVRScrollView.m */,
+				968A06860BE28102001F830D /* FLVRVideoCell.h */,
+				968A06870BE28102001F830D /* FLVRVideoCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D5B49AC048680CD000E48DA /* FLVR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "FLVR" */;
+			buildPhases = (
+				8D5B49AF048680CD000E48DA /* Resources */,
+				8D5B49B1048680CD000E48DA /* Sources */,
+				8D5B49B3048680CD000E48DA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FLVR;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = FLVR;
+			productReference = 8D5B49B6048680CD000E48DA /* FLVR.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "FLVR" */;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				de,
+				en,
+				es,
+				fr,
+				ja,
+				ko,
+				nl,
+				sv,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* FLVR */;
+			projectDirPath = "";
+			targets = (
+				8D5B49AC048680CD000E48DA /* FLVR */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D5B49AF048680CD000E48DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				968A06D20BE28157001F830D /* Cancel.png in Resources */,
+				968A06D50BE28157001F830D /* defaults.plist in Resources */,
+				968A06D60BE28157001F830D /* Download.png in Resources */,
+				968A06DA0BE28157001F830D /* ffmpeg in Resources */,
+				968A06DB0BE28157001F830D /* FLVR.icns in Resources */,
+				968A06E20BE28157001F830D /* license.plist in Resources */,
+				968A06E30BE28157001F830D /* Logo.png in Resources */,
+				968A06E40BE28157001F830D /* LogoDesaturated.png in Resources */,
+				968A06E50BE28157001F830D /* NameAndVersion.png in Resources */,
+				968A06E80BE28157001F830D /* Old Options.nib in Resources */,
+				968A06E90BE28157001F830D /* Options.nib in Resources */,
+				968A06EA0BE28157001F830D /* RevealInFinder.png in Resources */,
+				968A06ED0BE28157001F830D /* Toolbar.png in Resources */,
+				968A06EE0BE28157001F830D /* ToolbarPressed.png in Resources */,
+				968A06EF0BE28157001F830D /* WarningLeft.png in Resources */,
+				968A06F00BE28157001F830D /* WarningRight.png in Resources */,
+				968A075D0BE28495001F830D /* NowPlaying.nib in Resources */,
+				968A07600BE284A0001F830D /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D5B49B1048680CD000E48DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				968A06880BE28102001F830D /* NSBezierPath+TastyApps.m in Sources */,
+				968A06890BE28102001F830D /* NSImage+TastyApps.m in Sources */,
+				968A068A0BE28102001F830D /* NSURLConnection+FLVR.m in Sources */,
+				968A068B0BE28102001F830D /* ToolbarController+FLVR.m in Sources */,
+				968A068C0BE28102001F830D /* FLVR.m in Sources */,
+				968A068D0BE28102001F830D /* FLVRNowPlayingWindowController.m in Sources */,
+				968A068E0BE28102001F830D /* FLVROptionsWindowController.m in Sources */,
+				968A068F0BE28102001F830D /* FLVRVideo.m in Sources */,
+				968A06900BE28102001F830D /* FLVRVideoInterceptor.m in Sources */,
+				968A06910BE28102001F830D /* FLVRBarButton.m in Sources */,
+				968A06920BE28102001F830D /* FLVRNowPlayingPanel.m in Sources */,
+				968A06930BE28102001F830D /* FLVRNowPlayingPanelThemeFrame.m in Sources */,
+				968A06940BE28102001F830D /* FLVRNowPlayingView.m in Sources */,
+				968A06950BE28102001F830D /* FLVRPulseButton.m in Sources */,
+				968A06960BE28102001F830D /* FLVRScrollView.m in Sources */,
+				968A06970BE28102001F830D /* FLVRVideoCell.m in Sources */,
+				968A072F0BE28378001F830D /* CTGradient.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		968A075B0BE28495001F830D /* NowPlaying.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				968A075C0BE28495001F830D /* de */,
+				968A07650BE284AA001F830D /* en */,
+				968A076C0BE284B2001F830D /* es */,
+				968A07720BE284BF001F830D /* fr */,
+				968A07740BE284CA001F830D /* ja */,
+				968A077E0BE284D5001F830D /* ko */,
+				968A07840BE284E1001F830D /* nl */,
+				968A07860BE284EF001F830D /* sv */,
+			);
+			name = NowPlaying.nib;
+			sourceTree = "<group>";
+		};
+		968A075E0BE284A0001F830D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				968A075F0BE284A0001F830D /* de */,
+				968A07710BE284B7001F830D /* es */,
+				968A07730BE284C4001F830D /* fr */,
+				968A077D0BE284CF001F830D /* ja */,
+				968A07830BE284DB001F830D /* ko */,
+				968A07850BE284E5001F830D /* nl */,
+				968A07870BE284F5001F830D /* sv */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB913B08733D840010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_SYMBOL_SEPARATION = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+					"-lcrypto",
+				);
+				PRODUCT_NAME = FLVR;
+				SYMROOT = Build;
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		1DEB913C08733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_SYMBOL_SEPARATION = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+					"-lcrypto",
+				);
+				PRODUCT_NAME = FLVR;
+				SYMROOT = Build;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		1DEB913F08733D840010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		1DEB914008733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "FLVR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913B08733D840010E9CD /* Debug */,
+				1DEB913C08733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "FLVR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913F08733D840010E9CD /* Debug */,
+				1DEB914008733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

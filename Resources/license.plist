@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Expires</key>
+	<string>2007-04-28 12:00:00 -0000</string>
+	<key>Product</key>
+	<string>FLVR</string>
+	<key>Signature</key>
+	<data>
+	ArJ07NsaNgPiTtTU8DwEnEPSRWVlmBVs9yZReVjCqU4wn/d04TmwHBqD1MIgJY44eQNG
+	f+D8qGMW97tT0tWEcyh67bpxHREtGAQtMM5cajmgj/yEkqwyen+oIHIDTD9ei1gqL8gL
+	6SCBKYiCLBycwBiKz4COlxeZ2qlM4Y1gjX4=
+	</data>
+	<key>Version</key>
+	<string>0.9 BETA</string>
+</dict>
+</plist>

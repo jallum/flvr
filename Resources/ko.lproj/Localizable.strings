@@ -1,0 +1,32 @@
+"This beta of FLVR has been corrupted.  A new beta - or possibly the final release - can be found on the TastyApps website.  Would you like to go there now?" = 
+    "사용중인 FLVR 베타버전에 이상이 생겼습니다. 새로운 베타버전(또는 최종 정식버전)을 테이스티앱스 웹사이트에서 다운로드하실 수 있습니다. 지금 연결하시겠습니까?";
+
+"This beta of FLVR has expired.  A new beta - or possibly the final release - can be found on the TastyApps website.  Would you like to go there now?" = 
+    "사용중인 FLVR 베타버전의 기간이 만료되었습니다. 새로운 베타버전(또는 최종 정식버전)을 테이스티앱스 웹사이트에서 다운로드하실 수 있습니다. 지금 연결하시겠습니까?";
+
+/*  When audio or video is "not available"  */
+"N/A" = "N/A";
+
+/*  frames per second  */
+"fps" = "fps"; 
+
+/*  audio channels - mono is single channel  */
+"Mono" = "Mono";
+
+/*  audio channels - stereo is two-channel */
+"Stereo" = "Stereo";
+
+/*  Abbreviation for kilohertz, the number of samples per second.  */
+"kHz" = "kHz";
+
+/*  Tooltip message */
+"FLVR - Download Flash Video" = "FLVR - 플래시 동영상 다운로드하기";
+
+/*  Menu Selection */
+"Show FLVR..." = "FLVR 보기...";
+
+/*  Window Footer  */
+"visit tastyapps.com for more tasty mac treats" = "Tastyapps.com에서 더 많은 제품을 만나보세요.";
+
+/*  Window Buttons  */
+"Close" = "닫기";

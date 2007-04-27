@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>flvr.destinationFolder</key>
+	<string>~/Movies</string>
+	<key>flvr.format</key>
+	<string>.mp4</string>
+	<key>flvr.audioCodec</key>
+	<string>aac</string>
+	<key>flvr.audioBitrate</key>
+	<integer>64</integer>
+	<key>flvr.videoCodec</key>
+	<string>mpeg4</string>
+	<key>flvr.videoBitrate</key>
+	<integer>300</integer>
+	<key>flvr.videoMaxrate</key>
+	<integer>768</integer>
+	<key>flvr.videoBufsize</key>
+	<integer>10240</integer>
+	<key>flvr.addToiTunes</key>
+	<true/>
+	<key>flvr.sendToGrowl</key>
+	<false/>
+</dict>
+</plist>

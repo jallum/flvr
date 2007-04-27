@@ -1,0 +1,17 @@
+{
+    IBClasses = (
+        {CLASS = FLVRNowPlayingPanel; LANGUAGE = ObjC; SUPERCLASS = NSPanel; }, 
+        {CLASS = FLVRNowPlayingView; LANGUAGE = ObjC; SUPERCLASS = NSMatrix; }, 
+        {
+            ACTIONS = {close = id; visitTasty = id; }; 
+            CLASS = FLVRNowPlayingWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {betaVersion = NSTextField; nowPlayingView = FLVRNowPlayingView; }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = FLVRScrollView; LANGUAGE = ObjC; SUPERCLASS = NSScrollView; }, 
+        {CLASS = FLVRTrayView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

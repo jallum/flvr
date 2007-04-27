@@ -1,0 +1,25 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                cancel = id; 
+                changeDestinationFolder = id; 
+                close = id; 
+                resetDestinationFolder = id; 
+            }; 
+            CLASS = FLVROptionsWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                audioBitrate = NSPopUpButton; 
+                audioCodec = NSPopUpButton; 
+                format = NSPopUpButton; 
+                videoBitrate = NSPopUpButton; 
+                videoCodec = NSPopUpButton; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = FLVRPanel; LANGUAGE = ObjC; SUPERCLASS = NSPanel; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}
