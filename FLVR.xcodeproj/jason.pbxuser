@@ -238,6 +238,7 @@
 			9655AFA70BE349F100B24313 /* PBXTextBookmark */ = 9655AFA70BE349F100B24313 /* PBXTextBookmark */;
 			9655AFA80BE349F600B24313 /* PBXTextBookmark */ = 9655AFA80BE349F600B24313 /* PBXTextBookmark */;
 			9655AFA90BE349F600B24313 /* PBXTextBookmark */ = 9655AFA90BE349F600B24313 /* PBXTextBookmark */;
+			9655AFAA0BE34A4300B24313 /* PBXTextBookmark */ = 9655AFAA0BE34A4300B24313 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 968A06590BE2809F001F830D /* Source Control */;
 		userBuildSettings = {
@@ -1038,13 +1039,23 @@
 		vrLen = 614;
 		vrLoc = 0;
 	};
+	9655AFAA0BE34A4300B24313 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9655AF660BE3423C00B24313 /* BrowserWindowController+FLVR.m */;
+		name = "BrowserWindowController+FLVR.m: 14";
+		rLen = 0;
+		rLoc = 521;
+		rType = 0;
+		vrLen = 614;
+		vrLoc = 0;
+	};
 	968A06590BE2809F001F830D /* Source Control */ = {
 		isa = PBXSourceControlManager;
 		fallbackIsa = XCSourceControlManager;
-		isSCMEnabled = 0;
+		isSCMEnabled = 1;
 		scmConfiguration = {
 		};
-		scmType = "";
+		scmType = scm.subversion;
 	};
 	968A065A0BE2809F001F830D /* Code sense */ = {
 		isa = PBXCodeSenseManager;

@@ -37,7 +37,6 @@
 		968A06E30BE28157001F830D /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A06BE0BE28157001F830D /* Logo.png */; };
 		968A06E40BE28157001F830D /* LogoDesaturated.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A06BF0BE28157001F830D /* LogoDesaturated.png */; };
 		968A06E50BE28157001F830D /* NameAndVersion.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A06C00BE28157001F830D /* NameAndVersion.png */; };
-		968A06E80BE28157001F830D /* Old Options.nib in Resources */ = {isa = PBXBuildFile; fileRef = 968A06C60BE28157001F830D /* Old Options.nib */; };
 		968A06E90BE28157001F830D /* Options.nib in Resources */ = {isa = PBXBuildFile; fileRef = 968A06C70BE28157001F830D /* Options.nib */; };
 		968A06EA0BE28157001F830D /* RevealInFinder.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A06C80BE28157001F830D /* RevealInFinder.png */; };
 		968A06ED0BE28157001F830D /* Toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A06CE0BE28157001F830D /* Toolbar.png */; };
@@ -106,7 +105,6 @@
 		968A06BE0BE28157001F830D /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		968A06BF0BE28157001F830D /* LogoDesaturated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoDesaturated.png; sourceTree = "<group>"; };
 		968A06C00BE28157001F830D /* NameAndVersion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NameAndVersion.png; sourceTree = "<group>"; };
-		968A06C60BE28157001F830D /* Old Options.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = "Old Options.nib"; sourceTree = "<group>"; };
 		968A06C70BE28157001F830D /* Options.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = Options.nib; sourceTree = "<group>"; };
 		968A06C80BE28157001F830D /* RevealInFinder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RevealInFinder.png; sourceTree = "<group>"; };
 		968A06CE0BE28157001F830D /* Toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Toolbar.png; sourceTree = "<group>"; };
@@ -177,7 +175,6 @@
 				968A06A20BE28157001F830D /* defaults.plist */,
 				968A06AC0BE28157001F830D /* ffmpeg */,
 				968A075B0BE28495001F830D /* NowPlaying.nib */,
-				968A06C60BE28157001F830D /* Old Options.nib */,
 				968A06C70BE28157001F830D /* Options.nib */,
 				8D5B49B7048680CD000E48DA /* Info.plist */,
 			);
@@ -382,7 +379,6 @@
 				968A06E30BE28157001F830D /* Logo.png in Resources */,
 				968A06E40BE28157001F830D /* LogoDesaturated.png in Resources */,
 				968A06E50BE28157001F830D /* NameAndVersion.png in Resources */,
-				968A06E80BE28157001F830D /* Old Options.nib in Resources */,
 				968A06E90BE28157001F830D /* Options.nib in Resources */,
 				968A06EA0BE28157001F830D /* RevealInFinder.png in Resources */,
 				968A06ED0BE28157001F830D /* Toolbar.png in Resources */,
