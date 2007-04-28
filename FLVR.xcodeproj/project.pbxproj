@@ -476,6 +476,7 @@
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_CFLAGS = "-DDEBUG";
 				OTHER_LDFLAGS = (
 					"-undefined",
 					dynamic_lookup,
