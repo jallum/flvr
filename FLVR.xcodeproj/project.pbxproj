@@ -12,6 +12,7 @@
 		9655AF370BE33F2700B24313 /* Download.psd in Resources */ = {isa = PBXBuildFile; fileRef = 9655AF340BE33F2700B24313 /* Download.psd */; };
 		9655AF380BE33F2700B24313 /* RevealInFinder.psd in Resources */ = {isa = PBXBuildFile; fileRef = 9655AF350BE33F2700B24313 /* RevealInFinder.psd */; };
 		9655AF390BE33F2700B24313 /* Toolbar.psd in Resources */ = {isa = PBXBuildFile; fileRef = 9655AF360BE33F2700B24313 /* Toolbar.psd */; };
+		9655AF670BE3423C00B24313 /* BrowserWindowController+FLVR.m in Sources */ = {isa = PBXBuildFile; fileRef = 9655AF660BE3423C00B24313 /* BrowserWindowController+FLVR.m */; };
 		968A06880BE28102001F830D /* NSBezierPath+TastyApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A06620BE28101001F830D /* NSBezierPath+TastyApps.m */; };
 		968A06890BE28102001F830D /* NSImage+TastyApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A06650BE28101001F830D /* NSImage+TastyApps.m */; };
 		968A068A0BE28102001F830D /* NSURLConnection+FLVR.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A06690BE28101001F830D /* NSURLConnection+FLVR.m */; };
@@ -58,6 +59,8 @@
 		9655AF340BE33F2700B24313 /* Download.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = Download.psd; sourceTree = "<group>"; };
 		9655AF350BE33F2700B24313 /* RevealInFinder.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = RevealInFinder.psd; sourceTree = "<group>"; };
 		9655AF360BE33F2700B24313 /* Toolbar.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = Toolbar.psd; sourceTree = "<group>"; };
+		9655AF650BE3423C00B24313 /* BrowserWindowController+FLVR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BrowserWindowController+FLVR.h"; sourceTree = "<group>"; };
+		9655AF660BE3423C00B24313 /* BrowserWindowController+FLVR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BrowserWindowController+FLVR.m"; sourceTree = "<group>"; };
 		968A06620BE28101001F830D /* NSBezierPath+TastyApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+TastyApps.m"; sourceTree = "<group>"; };
 		968A06630BE28101001F830D /* NSFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFrameView.h; sourceTree = "<group>"; };
 		968A06640BE28101001F830D /* NSImage+TastyApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+TastyApps.h"; sourceTree = "<group>"; };
@@ -288,6 +291,8 @@
 				968A06690BE28101001F830D /* NSURLConnection+FLVR.m */,
 				968A066A0BE28101001F830D /* ToolbarController+FLVR.h */,
 				968A066B0BE28101001F830D /* ToolbarController+FLVR.m */,
+				9655AF650BE3423C00B24313 /* BrowserWindowController+FLVR.h */,
+				9655AF660BE3423C00B24313 /* BrowserWindowController+FLVR.m */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -417,6 +422,7 @@
 				968A06960BE28102001F830D /* FLVRScrollView.m in Sources */,
 				968A06970BE28102001F830D /* FLVRVideoCell.m in Sources */,
 				968A072F0BE28378001F830D /* CTGradient.m in Sources */,
+				9655AF670BE3423C00B24313 /* BrowserWindowController+FLVR.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
