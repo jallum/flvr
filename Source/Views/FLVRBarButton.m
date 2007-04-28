@@ -1,4 +1,5 @@
 #import "FLVRBarButton.h"
+#import "CTGradient.h"
 
 @interface FLVRBarButton (Private)
 - (NSImage*) _buttonBackgroundWithColor:(NSColor*)color size:(NSSize)size;
@@ -90,8 +91,9 @@
 
     [bgPath closePath];
     
-    [color set];
-    [bgPath fill];
+    [bgPath setClip];
+    CTGradient* gradient = [CTGradient gradientWithBeginningColor:color endingColor:[color blendedColorWithFraction:0.3 ofColor:[NSColor whiteColor]]];
+    [gradient fillRect:r angle:90];
     
     [button unlockFocus];
     return button;
@@ -103,11 +105,11 @@
     [[NSGraphicsContext currentContext] saveGraphicsState];
 
     NSSize buttonSize = [self frame].size;
-    _buttonNormal = [self _buttonBackgroundWithColor:[NSColor colorWithCalibratedRed:0.5 green:0.0 blue:0.0 alpha:1.0] size:buttonSize];
+    _buttonNormal = [self _buttonBackgroundWithColor:[NSColor colorWithCalibratedRed:0.5 green:0.0 blue:0.0 alpha:8.0] size:buttonSize];
     _buttonNormalDim = [_buttonNormal copy];
-    _buttonOver = [self _buttonBackgroundWithColor:[NSColor colorWithCalibratedRed:0.7 green:0.0 blue:0.0 alpha:1.0] size:buttonSize];
-    _buttonPressed = [self _buttonBackgroundWithColor:[NSColor colorWithCalibratedRed:0.6 green:0.0 blue:0.0 alpha:1.0] size:buttonSize];
-    _buttonSelected = [self _buttonBackgroundWithColor:[NSColor colorWithCalibratedRed:0.5 green:0.0 blue:0.0 alpha:1.0] size:buttonSize];
+    _buttonOver = [self _buttonBackgroundWithColor:[NSColor colorWithCalibratedRed:0.7 green:0.0 blue:0.0 alpha:8.0] size:buttonSize];
+    _buttonPressed = [self _buttonBackgroundWithColor:[NSColor colorWithCalibratedRed:0.6 green:0.0 blue:0.0 alpha:8.0] size:buttonSize];
+    _buttonSelected = [self _buttonBackgroundWithColor:[NSColor colorWithCalibratedRed:0.5 green:0.0 blue:0.0 alpha:8.0] size:buttonSize];
     _buttonSelectedDim = [_buttonSelected copy];
 
     //create button text

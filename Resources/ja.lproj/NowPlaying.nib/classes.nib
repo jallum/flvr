@@ -1,9 +1,10 @@
 {
     IBClasses = (
+        {CLASS = FLVRBarButton; LANGUAGE = ObjC; SUPERCLASS = NSButton; }, 
         {CLASS = FLVRNowPlayingPanel; LANGUAGE = ObjC; SUPERCLASS = NSPanel; }, 
         {CLASS = FLVRNowPlayingView; LANGUAGE = ObjC; SUPERCLASS = NSMatrix; }, 
         {
-            ACTIONS = {close = id; visitTasty = id; }; 
+            ACTIONS = {clearAll = id; clearCompleted = id; close = id; visitTasty = id; }; 
             CLASS = FLVRNowPlayingWindowController; 
             LANGUAGE = ObjC; 
             OUTLETS = {betaVersion = NSTextField; nowPlayingView = FLVRNowPlayingView; }; 
