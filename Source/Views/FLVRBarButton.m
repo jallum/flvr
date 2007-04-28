@@ -75,7 +75,7 @@
     const float maxY = NSMaxY(r);
     const float midX = NSMidX(r); 
     const float midY = NSMidY(r);
-    const float radius = 8;
+    const float radius = 10;
     NSBezierPath* bgPath = [NSBezierPath bezierPath];
 
     [button lockFocus];

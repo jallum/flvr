@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		9655AED50BE2ABDE00B24313 /* license.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9655AED40BE2ABDE00B24313 /* license.plist */; };
+		9655AF370BE33F2700B24313 /* Download.psd in Resources */ = {isa = PBXBuildFile; fileRef = 9655AF340BE33F2700B24313 /* Download.psd */; };
+		9655AF380BE33F2700B24313 /* RevealInFinder.psd in Resources */ = {isa = PBXBuildFile; fileRef = 9655AF350BE33F2700B24313 /* RevealInFinder.psd */; };
+		9655AF390BE33F2700B24313 /* Toolbar.psd in Resources */ = {isa = PBXBuildFile; fileRef = 9655AF360BE33F2700B24313 /* Toolbar.psd */; };
 		968A06880BE28102001F830D /* NSBezierPath+TastyApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A06620BE28101001F830D /* NSBezierPath+TastyApps.m */; };
 		968A06890BE28102001F830D /* NSImage+TastyApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A06650BE28101001F830D /* NSImage+TastyApps.m */; };
 		968A068A0BE28102001F830D /* NSURLConnection+FLVR.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A06690BE28101001F830D /* NSURLConnection+FLVR.m */; };
@@ -29,7 +33,6 @@
 		968A06D60BE28157001F830D /* Download.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A06A30BE28157001F830D /* Download.png */; };
 		968A06DA0BE28157001F830D /* ffmpeg in Resources */ = {isa = PBXBuildFile; fileRef = 968A06AC0BE28157001F830D /* ffmpeg */; };
 		968A06DB0BE28157001F830D /* FLVR.icns in Resources */ = {isa = PBXBuildFile; fileRef = 968A06AD0BE28157001F830D /* FLVR.icns */; };
-		968A06E20BE28157001F830D /* license.plist in Resources */ = {isa = PBXBuildFile; fileRef = 968A06BD0BE28157001F830D /* license.plist */; };
 		968A06E30BE28157001F830D /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A06BE0BE28157001F830D /* Logo.png */; };
 		968A06E40BE28157001F830D /* LogoDesaturated.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A06BF0BE28157001F830D /* LogoDesaturated.png */; };
 		968A06E50BE28157001F830D /* NameAndVersion.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A06C00BE28157001F830D /* NameAndVersion.png */; };
@@ -51,6 +54,10 @@
 		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		8D5B49B6048680CD000E48DA /* FLVR.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FLVR.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		9655AED40BE2ABDE00B24313 /* license.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = license.plist; path = Installer/Resources/Plugin/license.plist; sourceTree = SOURCE_ROOT; };
+		9655AF340BE33F2700B24313 /* Download.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = Download.psd; sourceTree = "<group>"; };
+		9655AF350BE33F2700B24313 /* RevealInFinder.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = RevealInFinder.psd; sourceTree = "<group>"; };
+		9655AF360BE33F2700B24313 /* Toolbar.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = Toolbar.psd; sourceTree = "<group>"; };
 		968A06620BE28101001F830D /* NSBezierPath+TastyApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+TastyApps.m"; sourceTree = "<group>"; };
 		968A06630BE28101001F830D /* NSFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFrameView.h; sourceTree = "<group>"; };
 		968A06640BE28101001F830D /* NSImage+TastyApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+TastyApps.h"; sourceTree = "<group>"; };
@@ -93,7 +100,6 @@
 		968A06A30BE28157001F830D /* Download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Download.png; sourceTree = "<group>"; };
 		968A06AC0BE28157001F830D /* ffmpeg */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = ffmpeg; sourceTree = "<group>"; };
 		968A06AD0BE28157001F830D /* FLVR.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = FLVR.icns; sourceTree = "<group>"; };
-		968A06BD0BE28157001F830D /* license.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = license.plist; sourceTree = "<group>"; };
 		968A06BE0BE28157001F830D /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		968A06BF0BE28157001F830D /* LogoDesaturated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoDesaturated.png; sourceTree = "<group>"; };
 		968A06C00BE28157001F830D /* NameAndVersion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NameAndVersion.png; sourceTree = "<group>"; };
@@ -161,24 +167,15 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9655AF3A0BE33F2D00B24313 /* Images */,
+				9655AF330BE33F0900B24313 /* PSDs */,
+				9655AED40BE2ABDE00B24313 /* license.plist */,
 				968A075E0BE284A0001F830D /* Localizable.strings */,
-				968A075B0BE28495001F830D /* NowPlaying.nib */,
-				968A069C0BE28157001F830D /* Cancel.png */,
 				968A06A20BE28157001F830D /* defaults.plist */,
-				968A06A30BE28157001F830D /* Download.png */,
 				968A06AC0BE28157001F830D /* ffmpeg */,
-				968A06AD0BE28157001F830D /* FLVR.icns */,
-				968A06BD0BE28157001F830D /* license.plist */,
-				968A06BE0BE28157001F830D /* Logo.png */,
-				968A06BF0BE28157001F830D /* LogoDesaturated.png */,
-				968A06C00BE28157001F830D /* NameAndVersion.png */,
+				968A075B0BE28495001F830D /* NowPlaying.nib */,
 				968A06C60BE28157001F830D /* Old Options.nib */,
 				968A06C70BE28157001F830D /* Options.nib */,
-				968A06C80BE28157001F830D /* RevealInFinder.png */,
-				968A06CE0BE28157001F830D /* Toolbar.png */,
-				968A06CF0BE28157001F830D /* ToolbarPressed.png */,
-				968A06D00BE28157001F830D /* WarningLeft.png */,
-				968A06D10BE28157001F830D /* WarningRight.png */,
 				8D5B49B7048680CD000E48DA /* Info.plist */,
 			);
 			path = Resources;
@@ -238,6 +235,34 @@
 				968A06780BE28101001F830D /* Safari.h */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		9655AF330BE33F0900B24313 /* PSDs */ = {
+			isa = PBXGroup;
+			children = (
+				9655AF340BE33F2700B24313 /* Download.psd */,
+				9655AF350BE33F2700B24313 /* RevealInFinder.psd */,
+				9655AF360BE33F2700B24313 /* Toolbar.psd */,
+			);
+			name = PSDs;
+			sourceTree = "<group>";
+		};
+		9655AF3A0BE33F2D00B24313 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				968A06AD0BE28157001F830D /* FLVR.icns */,
+				968A069C0BE28157001F830D /* Cancel.png */,
+				968A06A30BE28157001F830D /* Download.png */,
+				968A06BE0BE28157001F830D /* Logo.png */,
+				968A06BF0BE28157001F830D /* LogoDesaturated.png */,
+				968A06C00BE28157001F830D /* NameAndVersion.png */,
+				968A06C80BE28157001F830D /* RevealInFinder.png */,
+				968A06CE0BE28157001F830D /* Toolbar.png */,
+				968A06CF0BE28157001F830D /* ToolbarPressed.png */,
+				968A06D00BE28157001F830D /* WarningLeft.png */,
+				968A06D10BE28157001F830D /* WarningRight.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		968A06600BE28101001F830D /* 3rd Party */ = {
@@ -315,7 +340,6 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "FLVR" */;
-			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -334,7 +358,6 @@
 			mainGroup = 089C166AFE841209C02AAC07 /* FLVR */;
 			projectDirPath = "";
 			projectRoot = "";
-			shouldCheckCompatibility = 1;
 			targets = (
 				8D5B49AC048680CD000E48DA /* FLVR */,
 			);
@@ -351,7 +374,6 @@
 				968A06D60BE28157001F830D /* Download.png in Resources */,
 				968A06DA0BE28157001F830D /* ffmpeg in Resources */,
 				968A06DB0BE28157001F830D /* FLVR.icns in Resources */,
-				968A06E20BE28157001F830D /* license.plist in Resources */,
 				968A06E30BE28157001F830D /* Logo.png in Resources */,
 				968A06E40BE28157001F830D /* LogoDesaturated.png in Resources */,
 				968A06E50BE28157001F830D /* NameAndVersion.png in Resources */,
@@ -364,6 +386,10 @@
 				968A06F00BE28157001F830D /* WarningRight.png in Resources */,
 				968A075D0BE28495001F830D /* NowPlaying.nib in Resources */,
 				968A07600BE284A0001F830D /* Localizable.strings in Resources */,
+				9655AED50BE2ABDE00B24313 /* license.plist in Resources */,
+				9655AF370BE33F2700B24313 /* Download.psd in Resources */,
+				9655AF380BE33F2700B24313 /* RevealInFinder.psd in Resources */,
+				9655AF390BE33F2700B24313 /* Toolbar.psd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
