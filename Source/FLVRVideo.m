@@ -367,6 +367,8 @@ static NSArray* extensionsToStrip;
 		NSLog(@"Unsupported video buffer size: %d", videoBufsize); 
 		return;
 	}
+    
+    BOOL deinterlace = [[options objectForKey:@"flvr.deinterlace"] intValue];
 
 	int audioQuality = 250;
 	
@@ -397,6 +399,9 @@ static NSArray* extensionsToStrip;
     } else {
         launchPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"ffmpeg" ofType:@""];
 		arguments = [NSMutableArray arrayWithArray:[[NSString stringWithFormat:@"-f %@ -i -", type] componentsSeparatedByString:@" "]];
+        if (deinterlace) {
+            [arguments addObject:@"-deinterlace"];
+        }
 		[arguments addObjectsFromArray:[[NSString stringWithFormat:@"-vcodec %@", videoCodec] componentsSeparatedByString:@" "]]; 
 		if (![@"copy" isEqualTo:videoCodec]) {
 			[arguments addObjectsFromArray:[[NSString stringWithFormat:@"-b %dk -maxrate %dk -bufsize %dk", videoBitrate, videoMaxrate, videoBufsize] componentsSeparatedByString:@" "]]; 
