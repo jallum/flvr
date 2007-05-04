@@ -17,7 +17,7 @@ NSString* FLVRNowPlayingOpenedNotification = \
 
 - (void) awakeFromNib
 {
-    [betaVersion setStringValue:@"B13"];
+    [betaVersion setStringValue:@"B14"];
 
     [[NSNotificationCenter defaultCenter] postNotificationName:FLVRNowPlayingOpenedNotification object:self];
     [nowPlayingView setVideos:[FLVRVideo registeredVideos]];

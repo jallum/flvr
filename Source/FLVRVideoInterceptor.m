@@ -196,7 +196,7 @@ static unsigned char MAGIC_WMV[] = {
              *  are there.  This screws up FFMPEG, which pays attention to 
              *  these bits, and will ignore audio if they are not set properly.
              */
-            bytes[0x04] |= 5;
+//            bytes[0x04] |= 5;
         } 
         type = @"flv";
     } else if ([data length] >= sizeof(MAGIC_RM) && (0 == memcmp(bytes, MAGIC_RM, sizeof(MAGIC_RM)))) {

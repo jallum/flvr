@@ -8,6 +8,14 @@
 		addToTargets = (
 			8D5B49AC048680CD000E48DA /* FLVR */,
 		);
+		breakpoints = (
+			96D1FE6B0BE3F88000EE1F38 /* FLVRVideoInterceptor.m:187 */,
+			96D1FEA10BE3F9BF00EE1F38 /* FLVRVideo.m:705 */,
+			96D1FEA60BE3F9E100EE1F38 /* FLVRVideo.m:705 */,
+			96D1FF0E0BE3FE3A00EE1F38 /* FLVRVideo.m:705 */,
+			96D1014B0BE4158500EE1F38 /* FLVRVideo.m:402 */,
+			96D104F20BE5031D00EE1F38 /* FLVRVideo.m:277 */,
+		);
 		codeSenseManager = 968A065A0BE2809F001F830D /* Code sense */;
 		executables = (
 			968A078D0BE2851B001F830D /* Safari */,
@@ -47,7 +55,7 @@
 				PBXFileTableDataSourceColumnWidthsKey = (
 					22,
 					300,
-					818,
+					817,
 				);
 				PBXFileTableDataSourceColumnsKey = (
 					PBXExecutablesDataSource_ActiveFlagID,
@@ -60,7 +68,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					364,
+					919,
 					20,
 					48,
 					43,
@@ -134,8 +142,8 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					200,
-					749,
+					879,
+					60,
 					20,
 					48,
 					43,
@@ -151,8 +159,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 199450498;
-			PBXWorkspaceStateSaveDate = 199450498;
+			PBXPerProjectTemplateStateSaveDate = 199967345;
+			PBXWorkspaceStateSaveDate = 199967345;
 		};
 		sourceControlManager = 968A06590BE2809F001F830D /* Source Control */;
 		userBuildSettings = {
@@ -170,9 +178,9 @@
 	};
 	9655AED40BE2ABDE00B24313 /* license.plist */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1323, 302}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1097, 745}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1323, 302}}";
+			sepNavVisRect = "{{0, 0}, {1097, 745}}";
 		};
 	};
 	9655AF650BE3423C00B24313 /* BrowserWindowController+FLVR.h */ = {
@@ -227,17 +235,61 @@
 	968A066D0BE28101001F830D /* FLVR.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {2492, 6944}}";
-			sepNavSelRange = "{121, 41}";
-			sepNavVisRect = "{{0, 0}, {0, 0}}";
+			sepNavSelRange = "{13557, 0}";
+			sepNavVisRect = "{{0, 4907}, {1328, 196}}";
 			sepNavWindowFrame = "{{80, -5}, {1337, 878}}";
 		};
 	};
 	968A066F0BE28101001F830D /* FLVRNowPlayingWindowController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1292, 1512}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1278, 1512}}";
 			sepNavSelRange = "{497, 0}";
-			sepNavVisRect = "{{0, 0}, {1292, 749}}";
+			sepNavVisRect = "{{0, 0}, {1278, 749}}";
 			sepNavWindowFrame = "{{80, -5}, {1337, 878}}";
+		};
+	};
+	968A06700BE28101001F830D /* FLVROptionsWindowController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1097, 745}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {1097, 745}}";
+		};
+	};
+	968A06710BE28101001F830D /* FLVROptionsWindowController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1121, 3206}}";
+			sepNavSelRange = "{827, 0}";
+			sepNavVisRect = "{{0, 573}, {1121, 512}}";
+			sepNavWindowFrame = "{{90, 315}, {750, 558}}";
+		};
+	};
+	968A06720BE28101001F830D /* FLVRVideo.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1121, 882}}";
+			sepNavSelRange = "{268, 20}";
+			sepNavVisRect = "{{0, 0}, {1121, 745}}";
+		};
+	};
+	968A06730BE28101001F830D /* FLVRVideo.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1646, 9870}}";
+			sepNavSelRange = "{19153, 0}";
+			sepNavVisRect = "{{0, 7517}, {1121, 745}}";
+			sepNavWindowFrame = "{{80, -5}, {1337, 878}}";
+		};
+	};
+	968A06750BE28101001F830D /* FLVRVideoInterceptor.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1121, 745}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {1121, 745}}";
+		};
+	};
+	968A06760BE28101001F830D /* FLVRVideoInterceptor.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1323, 3332}}";
+			sepNavSelRange = "{6070, 0}";
+			sepNavVisRect = "{{0, 0}, {0, 0}}";
 		};
 	};
 	968A067B0BE28101001F830D /* FLVRBarButton.m */ = {
@@ -245,6 +297,13 @@
 			sepNavIntBoundsRect = "{{0, 0}, {1121, 3500}}";
 			sepNavSelRange = "{3100, 0}";
 			sepNavVisRect = "{{0, 965}, {1121, 745}}";
+		};
+	};
+	968A067E0BE28101001F830D /* FLVRNowPlayingPanelThemeFrame.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1121, 745}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {1121, 745}}";
 		};
 	};
 	968A06800BE28101001F830D /* FLVRNowPlayingView.h */ = {
@@ -292,8 +351,27 @@
 		launchableReference = 968A078E0BE2851C001F830D /* Safari */;
 		libgmallocEnabled = 0;
 		name = Safari;
+		savedGlobals = {
+		};
 		sourceDirectories = (
 		);
+		variableFormatDictionary = {
+			$cs = 1;
+			$ds = 1;
+			$eax = 1;
+			$ebp = 1;
+			$ebx = 1;
+			$ecx = 1;
+			$edi = 1;
+			$edx = 1;
+			$eflags = 1;
+			$eip = 1;
+			$es = 1;
+			$esi = 1;
+			$esp = 1;
+			$gs = 1;
+			$ss = 1;
+		};
 	};
 	968A078E0BE2851C001F830D /* Safari */ = {
 		isa = PBXFileReference;
@@ -301,5 +379,107 @@
 		name = Safari;
 		path = /Applications/Safari.app/Contents/MacOS/Safari;
 		sourceTree = "<absolute>";
+	};
+	96D1014B0BE4158500EE1F38 /* FLVRVideo.m:402 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 968A06730BE28101001F830D /* FLVRVideo.m */;
+		functionName = "-_readFirstFrameOutput:";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 402;
+		location = FLVR;
+		modificationTime = 199558512.653431;
+		state = 1;
+	};
+	96D104F20BE5031D00EE1F38 /* FLVRVideo.m:277 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 968A06730BE28101001F830D /* FLVRVideo.m */;
+		functionName = "-_processData:";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 277;
+		location = FLVR;
+		modificationTime = 199559068.903783;
+		state = 1;
+	};
+	96D1FE6B0BE3F88000EE1F38 /* FLVRVideoInterceptor.m:187 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 968A06760BE28101001F830D /* FLVRVideoInterceptor.m */;
+		functionName = "-_attemptToCaptureConnection:withData:";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 187;
+		location = FLVR;
+		modificationTime = 199558509.466978;
+		state = 2;
+	};
+	96D1FEA10BE3F9BF00EE1F38 /* FLVRVideo.m:705 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 968A06730BE28101001F830D /* FLVRVideo.m */;
+		functionName = "-_readFirstFrameOutput:";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 705;
+		location = FLVR;
+		modificationTime = 199558512.628732;
+		state = 1;
+	};
+	96D1FEA60BE3F9E100EE1F38 /* FLVRVideo.m:705 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 968A06730BE28101001F830D /* FLVRVideo.m */;
+		functionName = "-_readFirstFrameOutput:";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 705;
+		location = FLVR;
+		modificationTime = 199558512.637354;
+		state = 1;
+	};
+	96D1FF0E0BE3FE3A00EE1F38 /* FLVRVideo.m:705 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 968A06730BE28101001F830D /* FLVRVideo.m */;
+		functionName = "-_readFirstFrameOutput:";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 705;
+		location = FLVR;
+		modificationTime = 199558512.645142;
+		state = 1;
 	};
 }

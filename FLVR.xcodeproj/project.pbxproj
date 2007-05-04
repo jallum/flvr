@@ -483,7 +483,7 @@
 				PRODUCT_NAME = FLVR;
 				SYMROOT = Build;
 				WRAPPER_EXTENSION = bundle;
-				ZERO_LINK = YES;
+				ZERO_LINK = NO;
 			};
 			name = Debug;
 		};
