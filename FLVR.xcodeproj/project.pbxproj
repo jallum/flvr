@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
-		9655AED50BE2ABDE00B24313 /* license.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9655AED40BE2ABDE00B24313 /* license.plist */; };
 		9655AF370BE33F2700B24313 /* Download.psd in Resources */ = {isa = PBXBuildFile; fileRef = 9655AF340BE33F2700B24313 /* Download.psd */; };
 		9655AF380BE33F2700B24313 /* RevealInFinder.psd in Resources */ = {isa = PBXBuildFile; fileRef = 9655AF350BE33F2700B24313 /* RevealInFinder.psd */; };
 		9655AF390BE33F2700B24313 /* Toolbar.psd in Resources */ = {isa = PBXBuildFile; fileRef = 9655AF360BE33F2700B24313 /* Toolbar.psd */; };
@@ -123,7 +122,6 @@
 		968A07870BE284F5001F830D /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		96A9AFE60BE3501E00E8C327 /* de */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = de; path = de.lproj/NowPlaying.nib; sourceTree = "<group>"; };
 		96A9AFEC0BE3502F00E8C327 /* en */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = en; path = en.lproj/NowPlaying.nib; sourceTree = "<group>"; };
-		96A9AFF50BE3503800E8C327 /* es */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = es; path = es.lproj/NowPlaying.nib; sourceTree = "<group>"; };
 		96A9AFF60BE3504100E8C327 /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/NowPlaying.nib; sourceTree = "<group>"; };
 		96A9AFF70BE3504A00E8C327 /* ja */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = ja; path = ja.lproj/NowPlaying.nib; sourceTree = "<group>"; };
 		96A9AFF80BE3505100E8C327 /* ko */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = ko; path = ko.lproj/NowPlaying.nib; sourceTree = "<group>"; };
@@ -342,7 +340,6 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "FLVR" */;
-			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -361,7 +358,6 @@
 			mainGroup = 089C166AFE841209C02AAC07 /* FLVR */;
 			projectDirPath = "";
 			projectRoot = "";
-			shouldCheckCompatibility = 1;
 			targets = (
 				8D5B49AC048680CD000E48DA /* FLVR */,
 			);
@@ -388,7 +384,6 @@
 				968A06EF0BE28157001F830D /* WarningLeft.png in Resources */,
 				968A06F00BE28157001F830D /* WarningRight.png in Resources */,
 				968A07600BE284A0001F830D /* Localizable.strings in Resources */,
-				9655AED50BE2ABDE00B24313 /* license.plist in Resources */,
 				9655AF370BE33F2700B24313 /* Download.psd in Resources */,
 				9655AF380BE33F2700B24313 /* RevealInFinder.psd in Resources */,
 				9655AF390BE33F2700B24313 /* Toolbar.psd in Resources */,
@@ -446,7 +441,6 @@
 			children = (
 				96A9AFE60BE3501E00E8C327 /* de */,
 				96A9AFEC0BE3502F00E8C327 /* en */,
-				96A9AFF50BE3503800E8C327 /* es */,
 				96A9AFF60BE3504100E8C327 /* fr */,
 				96A9AFF70BE3504A00E8C327 /* ja */,
 				96A9AFF80BE3505100E8C327 /* ko */,

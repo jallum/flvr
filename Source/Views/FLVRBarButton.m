@@ -105,11 +105,11 @@
     [[NSGraphicsContext currentContext] saveGraphicsState];
 
     NSSize buttonSize = [self frame].size;
-    _buttonNormal = [self _buttonBackgroundWithColor:[NSColor colorWithCalibratedRed:0.5 green:0.0 blue:0.0 alpha:8.0] size:buttonSize];
+    _buttonNormal = [self _buttonBackgroundWithColor:[NSColor colorWithCalibratedRed:0.0 green:0.3 blue:0.6 alpha:8.0] size:buttonSize];
     _buttonNormalDim = [_buttonNormal copy];
-    _buttonOver = [self _buttonBackgroundWithColor:[NSColor colorWithCalibratedRed:0.7 green:0.0 blue:0.0 alpha:8.0] size:buttonSize];
-    _buttonPressed = [self _buttonBackgroundWithColor:[NSColor colorWithCalibratedRed:0.6 green:0.0 blue:0.0 alpha:8.0] size:buttonSize];
-    _buttonSelected = [self _buttonBackgroundWithColor:[NSColor colorWithCalibratedRed:0.5 green:0.0 blue:0.0 alpha:8.0] size:buttonSize];
+    _buttonOver = [self _buttonBackgroundWithColor:[NSColor colorWithCalibratedRed:0.0 green:0.3 blue:0.8 alpha:8.0] size:buttonSize];
+    _buttonPressed = [self _buttonBackgroundWithColor:[NSColor colorWithCalibratedRed:0.0 green:0.3 blue:0.9 alpha:8.0] size:buttonSize];
+    _buttonSelected = [self _buttonBackgroundWithColor:[NSColor colorWithCalibratedRed:0.0 green:0.3 blue:1.0 alpha:8.0] size:buttonSize];
     _buttonSelectedDim = [_buttonSelected copy];
 
     //create button text

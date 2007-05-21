@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+PATH=/bin:/usr/bin
+
+mv /FLVR\ Release\ Notes.rtf "$HOME"/Desktop
+open "$HOME"/Desktop/FLVR\ Release\ Notes.rtf
+
+exit 0;

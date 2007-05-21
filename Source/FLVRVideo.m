@@ -545,7 +545,7 @@ static NSArray* extensionsToStrip;
         int po[2]; po[0] = po[1] = 0; pipe(po);
         int pe[2]; pe[0] = pe[1] = 0; pipe(pe);
 
-        NSArray* arguments = [[NSString stringWithFormat:@"-f %@ -i - -ss 1.0 -vframes 1 -f image2 -vcodec bmp -", type] componentsSeparatedByString:@" "];
+        NSArray* arguments = [[NSString stringWithFormat:@"-f %@ -i - -ss 1.0 -vframes 1 -f image2pipe -vcodec bmp -", type] componentsSeparatedByString:@" "];
         char* execArguments[0x20];
         execArguments[0] = ffmpeg;
         for (int i = 1, imax = [arguments count] + 1; i < imax; i++) {
@@ -665,6 +665,9 @@ static NSArray* extensionsToStrip;
         BOOL audioInfo = NO;
         BOOL videoInfo = NO;
         NSArray* lines = [[[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease] componentsSeparatedByString:@"\n"];
+#ifdef DEBUG
+        NSLog(@"%@", lines);
+#endif
         for (int i = 0, imax = [lines count]; i < imax; i++) {
             @try {
                 NSArray* fields = [[lines objectAtIndex:i] componentsSeparatedByString:@" "];

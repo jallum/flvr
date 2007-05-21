@@ -8,6 +8,7 @@
 + (FLVR*) sharedInstance;
 
 - (void) showNowPlayingForWindow:(NSWindow*)window;
+- (NSDictionary*) parameters;
 
 @end
 

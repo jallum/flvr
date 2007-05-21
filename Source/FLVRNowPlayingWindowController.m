@@ -1,3 +1,4 @@
+#import "FLVR.h"
 #import "FLVRNowPlayingWindowController.h"
 #import "FLVRVideo.h"
 #import "FLVRVideoCell.h"
@@ -17,7 +18,20 @@ NSString* FLVRNowPlayingOpenedNotification = \
 
 - (void) awakeFromNib
 {
-    [betaVersion setStringValue:@"B14"];
+    NSDictionary* parameters = [[FLVR sharedInstance] parameters];
+    NSDate* expiresOn;
+    if (expiresOn = [NSDate dateWithString:[parameters objectForKey:@"Expires"]]) {
+        int daysRemaining = [expiresOn timeIntervalSinceNow] / (24 * 60 * 60);
+        if (0 == daysRemaining) {
+            [betaVersion setStringValue:FLVRLocalizedString(@"Expires Today!", @"")];
+        } else if (daysRemaining == 1) {
+            [betaVersion setStringValue:[NSString stringWithFormat:FLVRLocalizedString(@"Expires Tomorrow!", @"")]];
+        } else {
+            [betaVersion setStringValue:[NSString stringWithFormat:FLVRLocalizedString(@"Expires in %d days", @""), daysRemaining]];
+        }
+    } else {
+        [betaVersion setStringValue:[parameters objectForKey:@"Name"]];
+    }
 
     [[NSNotificationCenter defaultCenter] postNotificationName:FLVRNowPlayingOpenedNotification object:self];
     [nowPlayingView setVideos:[FLVRVideo registeredVideos]];

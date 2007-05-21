@@ -282,10 +282,10 @@
     } else {
         NSBezierPath* completed = nil;
         if ([video state] != FLVRVideoFinished) {
-            completed = [NSBezierPath circleSegmentWithCenter:c startAngle:270 endAngle:270 + (360 * percent) smallRadius:7.0 bigRadius:25];
+            completed = [NSBezierPath circleSegmentWithCenter:c startAngle:270 endAngle:270 + (360 * percent) smallRadius:7.0 bigRadius:21];
         } else if (percent > 0.0) {
             completed = [NSBezierPath bezierPath];
-            [completed appendBezierPathWithArcWithCenter:c radius:25 startAngle:0.0 endAngle:360.0];
+            [completed appendBezierPathWithArcWithCenter:c radius:21 startAngle:0.0 endAngle:360.0];
         }
         [color set];
         [completed fill];
@@ -294,7 +294,7 @@
 
         NSBezierPath* bezel = [NSBezierPath bezierPath];
         [bezel setLineWidth:3.0];
-        [bezel appendBezierPathWithArcWithCenter:c radius:25 startAngle:0 endAngle:360.0];
+        [bezel appendBezierPathWithArcWithCenter:c radius:21 startAngle:0 endAngle:360.0];
         [bezel stroke];
 
         if ([video state] != FLVRVideoFinished) {
