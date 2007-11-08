@@ -1,11 +1,6 @@
 #!/usr/bin/env bash
 PATH=/bin:/usr/bin:/usr/sbin
 
-#  Copy the license file from the package resources into it's final location
-#  within the bundle.
-#
-(cd "${1}"; tar cvf - Contents/Resources/license.plist) | (cd "${2}"/FLVR.bundle; tar xf -)
-
 #  Test the system version to determine at which index the Toolbar button 
 #  should be added.
 # 
