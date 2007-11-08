@@ -1,17 +1,75 @@
-{
-    IBClasses = (
-        {CLASS = FLVRBarButton; LANGUAGE = ObjC; SUPERCLASS = NSButton; }, 
-        {CLASS = FLVRNowPlayingPanel; LANGUAGE = ObjC; SUPERCLASS = NSPanel; }, 
-        {CLASS = FLVRNowPlayingView; LANGUAGE = ObjC; SUPERCLASS = NSMatrix; }, 
-        {
-            ACTIONS = {clearAll = id; clearCompleted = id; close = id; visitTasty = id; }; 
-            CLASS = FLVRNowPlayingWindowController; 
-            LANGUAGE = ObjC; 
-            OUTLETS = {betaVersion = NSTextField; nowPlayingView = FLVRNowPlayingView; }; 
-            SUPERCLASS = NSWindowController; 
-        }, 
-        {CLASS = FLVRScrollView; LANGUAGE = ObjC; SUPERCLASS = NSScrollView; }, 
-        {CLASS = FLVRTrayView; LANGUAGE = ObjC; SUPERCLASS = NSView; }
-    ); 
-    IBVersion = 1; 
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IBClasses</key>
+	<array>
+		<dict>
+			<key>ACTIONS</key>
+			<dict>
+				<key>clearAll</key>
+				<string>id</string>
+				<key>clearCompleted</key>
+				<string>id</string>
+				<key>close</key>
+				<string>id</string>
+				<key>visitTasty</key>
+				<string>id</string>
+			</dict>
+			<key>CLASS</key>
+			<string>FLVRNowPlayingWindowController</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>OUTLETS</key>
+			<dict>
+				<key>betaVersion</key>
+				<string>NSTextField</string>
+				<key>nowPlayingView</key>
+				<string>FLVRNowPlayingView</string>
+			</dict>
+			<key>SUPERCLASS</key>
+			<string>NSWindowController</string>
+		</dict>
+		<dict>
+			<key>CLASS</key>
+			<string>FLVRScrollView</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>SUPERCLASS</key>
+			<string>NSScrollView</string>
+		</dict>
+		<dict>
+			<key>CLASS</key>
+			<string>NSObject</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+		</dict>
+		<dict>
+			<key>CLASS</key>
+			<string>FLVRNowPlayingPanel</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>SUPERCLASS</key>
+			<string>NSPanel</string>
+		</dict>
+		<dict>
+			<key>CLASS</key>
+			<string>FLVRNowPlayingView</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>SUPERCLASS</key>
+			<string>NSMatrix</string>
+		</dict>
+		<dict>
+			<key>CLASS</key>
+			<string>FLVRBarButton</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>SUPERCLASS</key>
+			<string>NSButton</string>
+		</dict>
+	</array>
+	<key>IBVersion</key>
+	<string>1</string>
+</dict>
+</plist>

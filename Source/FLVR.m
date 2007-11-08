@@ -1,9 +1,27 @@
+/* FLVR -- Flash Video Ripper
+ * Copyright (C) 2007 Jason Allum
+ * 
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, 
+ * USA.
+ */
+
 #import "FLVR.h"
 #import <openssl/rsa.h>
 #import <openssl/sha.h>
 #import <objc/objc-class.h>
 #import <Carbon/Carbon.h>
-//#import "BrowserWindowController+FLVR.h"
 #import "ToolbarController+FLVR.h"
 #import "FLVRNowPlayingWindowController.h"
 #import "FLVROptionsWindowController.h"
@@ -38,140 +56,6 @@ static BOOL swapInstanceImplementations(Class aClass, SEL selA, SEL selB)
     } else {
         return NO;
     }
-}
-
-static NSDictionary* loadParameters()
-{
-    RSA* rsaKey = RSA_new();
-
-    /*  Create the public key.
-     */
-    unsigned char RSA_N[] = {
-        0xde, 0xa7, 0x87, 0x77, 0x85, 0xf9, 0xfe, 0xbe ^ 'F',
-        0x82, 0x09, 0x5b, 0x91, 0xcb, 0xf5, 0xf5, 0x90 ^ 'L',
-        0x10, 0xc4, 0xa9, 0x8c, 0xef, 0x19, 0xe7, 0x0f ^ 'V',
-        0x4f, 0xf1, 0xd0, 0x8d, 0x61, 0xb0, 0xa0, 0xf4 ^ 'R',
-        0x05, 0xe7, 0x01, 0xf6, 0x57, 0x93, 0xef, 0x4f ^ ' ',
-        0x65, 0xd2, 0x1d, 0xca, 0x2d, 0x74, 0xad, 0x86 ^ '1',
-        0xdc, 0xf4, 0x1b, 0xf3, 0xb3, 0x77, 0x26, 0x3a ^ '.',
-        0x7a, 0xdf, 0x2e, 0x48, 0xc3, 0xe9, 0x04, 0xa9 ^ '0',
-        0x90, 0x52, 0x60, 0x15, 0xa9, 0xc5, 0x05, 0x4e ^ ' ',
-        0x41, 0xcc, 0x48, 0x4c, 0xaf, 0x0c, 0xaf, 0x3c ^ ' ',
-        0x05, 0x45, 0x37, 0x58, 0x2d, 0xfa, 0xbe, 0xe2 ^ ' ',
-        0xed, 0x83, 0x56, 0x5b, 0xe2, 0xc5, 0x01, 0xd1 ^ ' ',
-        0x6f, 0xab, 0x0d, 0x91, 0x1e, 0x96, 0xb2, 0x7d ^ ' ',
-        0x22, 0xa9, 0x6a, 0x92, 0x8a, 0x1d, 0x86, 0x72 ^ ' ',
-        0xf5, 0x55, 0x07, 0x0a, 0xe2, 0x27, 0xdb, 0x58 ^ ' ',
-        0x8c, 0xa4, 0x1c, 0x35, 0x2c, 0x59, 0x94, 0x5b ^ ' ',
-    };
-    char* salt = "FLVR 1.0        ";
-    for (int i = 0, imax = strlen(salt); i < imax; i++) {
-        RSA_N[((i + 1) << 3) - 1] ^= salt[i];
-    }
-    rsaKey->n = BN_bin2bn(RSA_N, sizeof(RSA_N), NULL);
-
-    /*  Create the exponent.
-     */
-    unsigned char RSA_E[] = {
-        0x03
-    };
-	rsaKey->e = BN_bin2bn(RSA_E, sizeof(RSA_E), NULL);
-
-    /*  Load the license file, and check it for basic validity.
-     */
-    CFMutableDictionaryRef myDict = nil;
-	CFDataRef data;
-	SInt32 errorCode;
-	NSString* licenseFile = [[NSBundle bundleForClass:[FLVR class]] pathForResource:@"license" ofType:@"plist"];
-	if (!licenseFile || !CFURLCreateDataAndPropertiesFromResource(kCFAllocatorDefault, (CFURLRef)[NSURL fileURLWithPath:licenseFile], &data, NULL, NULL, &errorCode) || errorCode) {
-        RSA_free(rsaKey);
-        return NULL;
-    } else {
-        CFStringRef errorString = NULL;
-        myDict = (CFMutableDictionaryRef)CFPropertyListCreateFromXMLData(kCFAllocatorDefault, data, kCFPropertyListMutableContainers, &errorString);
-        CFRelease(data);
-        data = NULL;
-        if (errorString || CFDictionaryGetTypeID() != CFGetTypeID(myDict) || !CFPropertyListIsValid(myDict, kCFPropertyListXMLFormat_v1_0)) {
-            CFRelease(myDict);
-            RSA_free(rsaKey);
-            return NULL;
-        }
-    }
-    
-    /*  Extract the signature.
-     */
-    unsigned char sigBytes[128];
-    if (!CFDictionaryContainsKey(myDict, CFSTR("Signature"))) {
-        CFRelease(myDict);
-        RSA_free(rsaKey);
-        return NULL;
-    } else {
-        CFDataRef sigData = CFDictionaryGetValue(myDict, CFSTR("Signature"));
-        CFDataGetBytes(sigData, CFRangeMake(0, 128), sigBytes);
-        CFDictionaryRemoveValue(myDict, CFSTR("Signature"));
-    }
-    
-    /*  Decrypt the signature.
-     */
-    unsigned char checkDigest[128] = {0};
-    if (RSA_public_decrypt(128, sigBytes, checkDigest, rsaKey, RSA_PKCS1_PADDING) != SHA_DIGEST_LENGTH) {
-        CFRelease(myDict);
-        RSA_free(rsaKey);
-        return NULL;
-    } else {
-        RSA_free(rsaKey);
-        rsaKey = NULL;
-    }
-    
-    /*  Get the number of elements, Load the keys and build up the key array.
-     */
-    CFIndex count = CFDictionaryGetCount(myDict);
-    CFMutableArrayRef keyArray = CFArrayCreateMutable(kCFAllocatorDefault, count, NULL);
-    CFStringRef keys[count];
-    CFDictionaryGetKeysAndValues(myDict, (const void**)&keys, NULL);
-    for (int i = 0; i < count; i++) {
-        CFArrayAppendValue(keyArray, keys[i]);
-    }
-
-    /*  Sort the array, so that we'll have consistent hashes.
-     */
-    int context = kCFCompareCaseInsensitive;
-    CFArraySortValues(keyArray, CFRangeMake(0, count), (CFComparatorFunction)CFStringCompare, &context);
-    
-    /*  Hash the keys and values.
-     */
-    SHA_CTX ctx;
-    SHA1_Init(&ctx);
-    for (int i = 0; i < count; i++) {
-        char *valueBytes;
-        int valueLengthAsUTF8;
-        CFStringRef key = CFArrayGetValueAtIndex(keyArray, i);
-        CFStringRef value = CFDictionaryGetValue(myDict, key);
-
-        // Account for the null terminator
-        valueLengthAsUTF8 = CFStringGetMaximumSizeForEncoding(CFStringGetLength(value), kCFStringEncodingUTF8) + 1;
-        valueBytes = (char *)malloc(valueLengthAsUTF8);
-        CFStringGetCString(value, valueBytes, valueLengthAsUTF8, kCFStringEncodingUTF8);
-        SHA1_Update(&ctx, valueBytes, strlen(valueBytes));
-        free(valueBytes);
-    }
-    unsigned char digest[SHA_DIGEST_LENGTH];
-    SHA1_Final(digest, &ctx);
-    
-    if (keyArray != nil) {
-        CFRelease(keyArray);
-    }
-    
-    /*  Check if the signature is a match.
-     */
-    for (int i = 0; i < SHA_DIGEST_LENGTH; i++) {
-        if (checkDigest[i] ^ digest[i]) {
-            CFRelease(myDict);
-            return NULL;
-        }
-    }
-
-    return (NSDictionary*)myDict;
 }
 
 @implementation FLVR
@@ -234,14 +118,6 @@ static FLVR* sharedInstance;
         @selector(FLVR_cancel)
     );
 
-    /*  De-Obfuscate our init routine.
-     */
-    swapInstanceImplementations(
-        [FLVR class],
-        @selector(init),
-        @selector(initWithParameters:)
-    );
-
     /*  Finish up.
      */
     [[FLVR sharedInstance] performSelectorOnMainThread:@selector(completeInstallation) withObject:nil waitUntilDone:NO];
@@ -290,17 +166,6 @@ static FLVR* sharedInstance;
     NSLog(@"FLVR Installed.");
 }
 
-- (id) initWithParameters:(NSMutableDictionary*)_parameters
-{
-    if (self = [super init]) {
-        parameters = loadParameters();
-#ifdef DEBUG
-        NSLog(@"parameters = %@", parameters);
-#endif
-    }
-    return self;
-}
-
 - (id) init
 {
     if (self = [super init]) {
@@ -310,13 +175,7 @@ static FLVR* sharedInstance;
 
 - (void) dealloc
 {
-    [parameters release];
     [super dealloc];
-}
-
-- (NSDictionary*) parameters
-{
-    return [[parameters retain] autorelease];
 }
 
 - (BOOL) validateUserInterfaceItem:(id <NSValidatedUserInterfaceItem>)item
@@ -335,25 +194,7 @@ static FLVR* sharedInstance;
 
 - (void) showNowPlayingForWindow:(NSWindow*)window
 {
-    NSDate* expiresOn = nil;
-    if (!parameters) {
-        /*  No parameters.  The application and/or license file has 
-         *  most likely been tampered with...  Let them know that we're
-         *  not happy.
-         */
-        NSAlert* alert = [NSAlert alertWithMessageText:FLVRLocalizedString(@"This copy of FLVR has been corrupted.", @"") defaultButton:nil alternateButton:FLVRLocalizedString(@"No Thanks", "") otherButton:nil informativeTextWithFormat:FLVRLocalizedString(@"The latest version of FLVR can be found on the TastyApps website, at http://www.tastyapps.com.  Would you like to go there now?", @"")];
-        [alert setIcon:[[[NSImage alloc] initByReferencingFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"FLVR" ofType:@"icns"]] autorelease]];
-        [alert setAlertStyle:NSCriticalAlertStyle];
-        [alert beginSheetModalForWindow:window modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
-    } else if ([parameters objectForKey:@"Expires"] && (!(expiresOn = [NSDate dateWithString:[parameters objectForKey:@"Expires"]]) || (expiresOn == [[NSDate date] earlierDate:expiresOn]))) {
-        /*  There was an expiration date in the parameters, and it's 
-         *  passed.  Let them know that they should pay up...  in a 
-         *  nice way.
-         */
-        NSAlert* alert = [NSAlert alertWithMessageText:FLVRLocalizedString(@"This demo of FLVR has expired.", @"") defaultButton:nil alternateButton:FLVRLocalizedString(@"No Thanks", "") otherButton:nil informativeTextWithFormat:FLVRLocalizedString(@"It is possible to purchase FLVR for $15 at http://www.tastyapps.com.  Would you like to go there now?", @"")];
-        [alert setIcon:[[[NSImage alloc] initByReferencingFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"FLVR" ofType:@"icns"]] autorelease]];
-        [alert beginSheetModalForWindow:window modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
-    } else if (GetCurrentKeyModifiers() & (1 << optionKeyBit)) {
+    if (GetCurrentKeyModifiers() & (1 << optionKeyBit)) {
         FLVROptionsWindowController* controller = [[FLVROptionsWindowController alloc] initWithWindowNibName:@"Options"];
         [NSApp beginSheet:[controller window] modalForWindow:window modalDelegate:self didEndSelector:@selector(_optionsSheetDidEnd:returnCode:contextInfo:) contextInfo:controller];
     } else {

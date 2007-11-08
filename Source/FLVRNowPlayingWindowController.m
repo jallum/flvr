@@ -1,3 +1,21 @@
+/* FLVR -- Flash Video Ripper
+ * Copyright (C) 2007 Jason Allum
+ * 
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, 
+ * USA.
+ */
 #import "FLVR.h"
 #import "FLVRNowPlayingWindowController.h"
 #import "FLVRVideo.h"
@@ -18,21 +36,6 @@ NSString* FLVRNowPlayingOpenedNotification = \
 
 - (void) awakeFromNib
 {
-    NSDictionary* parameters = [[FLVR sharedInstance] parameters];
-    NSDate* expiresOn;
-    if (expiresOn = [NSDate dateWithString:[parameters objectForKey:@"Expires"]]) {
-        int daysRemaining = [expiresOn timeIntervalSinceNow] / (24 * 60 * 60);
-        if (0 == daysRemaining) {
-            [betaVersion setStringValue:FLVRLocalizedString(@"Expires Today!", @"")];
-        } else if (daysRemaining == 1) {
-            [betaVersion setStringValue:[NSString stringWithFormat:FLVRLocalizedString(@"Expires Tomorrow!", @"")]];
-        } else {
-            [betaVersion setStringValue:[NSString stringWithFormat:FLVRLocalizedString(@"Expires in %d days", @""), daysRemaining]];
-        }
-    } else {
-        [betaVersion setStringValue:[parameters objectForKey:@"Name"]];
-    }
-
     [[NSNotificationCenter defaultCenter] postNotificationName:FLVRNowPlayingOpenedNotification object:self];
     [nowPlayingView setVideos:[FLVRVideo registeredVideos]];
     
