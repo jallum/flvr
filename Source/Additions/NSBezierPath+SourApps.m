@@ -8,17 +8,17 @@
  * 
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * MERCHANSABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  * 
  * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
+ * along with this program; if not, write toSA the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, 
  * USA.
  */
-#import "NSBezierPath+TastyApps.h"
+#import "NSBezierPath+SourApps.h"
 
-@implementation NSBezierPath (TastyApps)
+@implementation NSBezierPath (SourApps)
 
 // Make a NSPoint with polar coordinates
 + (NSPoint) pointWithPolarCenter:(NSPoint)center radius:(float)r angle:(float)deg
@@ -38,34 +38,34 @@
     return bp;
 }
 
-+ (NSBezierPath *) bezierPathWithRoundedRect:(NSRect)aRect cornerRadius:(float)radius inCorners:(TACornerType)corners
++ (NSBezierPath *) bezierPathWithRoundedRect:(NSRect)aRect cornerRadius:(float)radius inCorners:(SACornerType)corners
 {
 	NSBezierPath* path = [self bezierPath];
 	radius = MIN(radius, 0.5f * MIN(NSWidth(aRect), NSHeight(aRect)));
 	NSRect rect = NSInsetRect(aRect, radius, radius);
 	
-	if (corners & TABottomLeftCorner) {
+	if (corners & SABottomLeftCorner) {
 		[path appendBezierPathWithArcWithCenter:NSMakePoint(NSMinX(rect), NSMinY(rect)) radius:radius startAngle:180.0 endAngle:270.0];
 	} else {
 		NSPoint cornerPoint = NSMakePoint(NSMinX(aRect), NSMinY(aRect));
 		[path appendBezierPathWithPoints:&cornerPoint count:1];
 	}
 	
-	if (corners & TABottomRightCorner) {
+	if (corners & SABottomRightCorner) {
 		[path appendBezierPathWithArcWithCenter:NSMakePoint(NSMaxX(rect), NSMinY(rect)) radius:radius startAngle:270.0 endAngle:360.0];
 	} else {
 		NSPoint cornerPoint = NSMakePoint(NSMaxX(aRect), NSMinY(aRect));
 		[path appendBezierPathWithPoints:&cornerPoint count:1];
 	}
 
-	if (corners & TATopRightCorner) {
+	if (corners & SATopRightCorner) {
 		[path appendBezierPathWithArcWithCenter:NSMakePoint(NSMaxX(rect), NSMaxY(rect)) radius:radius startAngle: 0.0 endAngle:90.0];
 	} else {
 		NSPoint cornerPoint = NSMakePoint(NSMaxX(aRect), NSMaxY(aRect));
 		[path appendBezierPathWithPoints:&cornerPoint count:1];
 	}
 	
-	if (corners & TATopLeftCorner) {
+	if (corners & SATopLeftCorner) {
 		[path appendBezierPathWithArcWithCenter:NSMakePoint(NSMinX(rect), NSMaxY(rect)) radius:radius startAngle:90.0 endAngle:180.0];
 	} else {
 		NSPoint cornerPoint = NSMakePoint(NSMinX(aRect), NSMaxY(aRect));
@@ -78,7 +78,7 @@
 
 + (NSBezierPath*)bezierPathWithRoundedRect:(NSRect)aRect cornerRadius:(float)radius
 {
-	return [NSBezierPath bezierPathWithRoundedRect:aRect cornerRadius:radius inCorners:TATopLeftCorner | TATopRightCorner | TABottomLeftCorner | TABottomRightCorner];
+	return [NSBezierPath bezierPathWithRoundedRect:aRect cornerRadius:radius inCorners:SATopLeftCorner | SATopRightCorner | SABottomLeftCorner | SABottomRightCorner];
 }
 
 @end

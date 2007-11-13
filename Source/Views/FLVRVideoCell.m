@@ -8,7 +8,7 @@
  * 
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * MERCHANSABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  * 
  * You should have received a copy of the GNU General Public License
@@ -20,8 +20,8 @@
 #import "FLVRVideoCell.h"
 #import "FLVRVideo.h"
 #import "FLVRNowPlayingView.h"
-#import "NSImage+TastyApps.h"
-#import "NSBezierPath+TastyApps.h"
+#import "NSImage+SourApps.h"
+#import "NSBezierPath+SourApps.h"
 
 #define NSOffsetPoint(p, xO, yO)  NSMakePoint(p.x + xO, p.y + yO)
 

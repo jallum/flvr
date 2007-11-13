@@ -24,8 +24,8 @@
 		F9BA950A0CE920DE008C77DE /* RevealInFinder.psd in Resources */ = {isa = PBXBuildFile; fileRef = 9655AF350BE33F2700B24313 /* RevealInFinder.psd */; };
 		F9BA950B0CE920DE008C77DE /* Toolbar.psd in Resources */ = {isa = PBXBuildFile; fileRef = 9655AF360BE33F2700B24313 /* Toolbar.psd */; };
 		F9BA950D0CE920DE008C77DE /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F99A76F70CE395F400781C2D /* LICENSE */; };
-		F9BA950E0CE920F0008C77DE /* NSBezierPath+TastyApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A06620BE28101001F830D /* NSBezierPath+TastyApps.m */; };
-		F9BA950F0CE920F0008C77DE /* NSImage+TastyApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A06650BE28101001F830D /* NSImage+TastyApps.m */; };
+		F9BA950E0CE920F0008C77DE /* NSBezierPath+SourApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A06620BE28101001F830D /* NSBezierPath+SourApps.m */; };
+		F9BA950F0CE920F0008C77DE /* NSImage+SourApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A06650BE28101001F830D /* NSImage+SourApps.m */; };
 		F9BA95100CE920F0008C77DE /* NSURLConnection+FLVR.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A06690BE28101001F830D /* NSURLConnection+FLVR.m */; };
 		F9BA95150CE920F0008C77DE /* FLVRVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A06730BE28101001F830D /* FLVRVideo.m */; };
 		F9BA95160CE920F0008C77DE /* FLVRVideoInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A06760BE28101001F830D /* FLVRVideoInterceptor.m */; };
@@ -40,9 +40,9 @@
 		F9BA971E0CE94BA8008C77DE /* DragDropTargetView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BA97130CE94BA7008C77DE /* DragDropTargetView.m */; };
 		F9BA971F0CE94BA8008C77DE /* FLVR.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BA97150CE94BA7008C77DE /* FLVR.m */; };
 		F9BA97830CE94CCF008C77DE /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BA97820CE94CCF008C77DE /* AddressBook.framework */; };
-		F9BA9C3C0CEA0613008C77DE /* drop_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F9BA9C3B0CEA0613008C77DE /* drop_bg.png */; };
-		F9BA9C9D0CEA0ACB008C77DE /* drop_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F9BA9C9C0CEA0ACB008C77DE /* drop_icon.png */; };
-		F9BA9C9F0CEA0AD3008C77DE /* drop_wait.png in Resources */ = {isa = PBXBuildFile; fileRef = F9BA9C9E0CEA0AD3008C77DE /* drop_wait.png */; };
+		F9D0331E0CEA2A2F009893BC /* drop_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F9D0331B0CEA2A2F009893BC /* drop_bg.png */; };
+		F9D0331F0CEA2A2F009893BC /* drop_wait.png in Resources */ = {isa = PBXBuildFile; fileRef = F9D0331C0CEA2A2F009893BC /* drop_wait.png */; };
+		F9D033200CEA2A2F009893BC /* drop_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F9D0331D0CEA2A2F009893BC /* drop_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,9 +52,9 @@
 		9655AF340BE33F2700B24313 /* Download.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = Download.psd; sourceTree = "<group>"; };
 		9655AF350BE33F2700B24313 /* RevealInFinder.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = RevealInFinder.psd; sourceTree = "<group>"; };
 		9655AF360BE33F2700B24313 /* Toolbar.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = Toolbar.psd; sourceTree = "<group>"; };
-		968A06620BE28101001F830D /* NSBezierPath+TastyApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+TastyApps.m"; sourceTree = "<group>"; };
-		968A06640BE28101001F830D /* NSImage+TastyApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+TastyApps.h"; sourceTree = "<group>"; };
-		968A06650BE28101001F830D /* NSImage+TastyApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+TastyApps.m"; sourceTree = "<group>"; };
+		968A06620BE28101001F830D /* NSBezierPath+SourApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+SourApps.m"; sourceTree = "<group>"; };
+		968A06640BE28101001F830D /* NSImage+SourApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+SourApps.h"; sourceTree = "<group>"; };
+		968A06650BE28101001F830D /* NSImage+SourApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+SourApps.m"; sourceTree = "<group>"; };
 		968A06680BE28101001F830D /* NSURLConnection+FLVR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLConnection+FLVR.h"; sourceTree = "<group>"; };
 		968A06690BE28101001F830D /* NSURLConnection+FLVR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLConnection+FLVR.m"; sourceTree = "<group>"; };
 		968A06720BE28101001F830D /* FLVRVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLVRVideo.h; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		968A06CF0BE28157001F830D /* ToolbarPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ToolbarPressed.png; sourceTree = "<group>"; };
 		968A06D00BE28157001F830D /* WarningLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WarningLeft.png; sourceTree = "<group>"; };
 		968A06D10BE28157001F830D /* WarningRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WarningRight.png; sourceTree = "<group>"; };
-		968A07020BE282C4001F830D /* NSBezierPath+TastyApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBezierPath+TastyApps.h"; sourceTree = "<group>"; };
+		968A07020BE282C4001F830D /* NSBezierPath+SourApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBezierPath+SourApps.h"; sourceTree = "<group>"; };
 		968A072D0BE28378001F830D /* CTGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTGradient.h; sourceTree = "<group>"; };
 		968A072E0BE28378001F830D /* CTGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTGradient.m; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -97,9 +97,9 @@
 		F9BA97140CE94BA7008C77DE /* FLVR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLVR.h; sourceTree = "<group>"; };
 		F9BA97150CE94BA7008C77DE /* FLVR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLVR.m; sourceTree = "<group>"; };
 		F9BA97820CE94CCF008C77DE /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = /System/Library/Frameworks/AddressBook.framework; sourceTree = "<absolute>"; };
-		F9BA9C3B0CEA0613008C77DE /* drop_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drop_bg.png; sourceTree = "<group>"; };
-		F9BA9C9C0CEA0ACB008C77DE /* drop_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drop_icon.png; sourceTree = "<group>"; };
-		F9BA9C9E0CEA0AD3008C77DE /* drop_wait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drop_wait.png; sourceTree = "<group>"; };
+		F9D0331B0CEA2A2F009893BC /* drop_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drop_bg.png; sourceTree = "<group>"; };
+		F9D0331C0CEA2A2F009893BC /* drop_wait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drop_wait.png; sourceTree = "<group>"; };
+		F9D0331D0CEA2A2F009893BC /* drop_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drop_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,9 +220,9 @@
 		9655AF3A0BE33F2D00B24313 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				F9BA9C3B0CEA0613008C77DE /* drop_bg.png */,
-				F9BA9C9C0CEA0ACB008C77DE /* drop_icon.png */,
-				F9BA9C9E0CEA0AD3008C77DE /* drop_wait.png */,
+				F9D0331B0CEA2A2F009893BC /* drop_bg.png */,
+				F9D0331C0CEA2A2F009893BC /* drop_wait.png */,
+				F9D0331D0CEA2A2F009893BC /* drop_icon.png */,
 				968A06AD0BE28157001F830D /* FLVR.icns */,
 				968A069C0BE28157001F830D /* Cancel.png */,
 				968A06A30BE28157001F830D /* Download.png */,
@@ -250,10 +250,10 @@
 		968A06610BE28101001F830D /* Additions */ = {
 			isa = PBXGroup;
 			children = (
-				968A07020BE282C4001F830D /* NSBezierPath+TastyApps.h */,
-				968A06620BE28101001F830D /* NSBezierPath+TastyApps.m */,
-				968A06640BE28101001F830D /* NSImage+TastyApps.h */,
-				968A06650BE28101001F830D /* NSImage+TastyApps.m */,
+				968A07020BE282C4001F830D /* NSBezierPath+SourApps.h */,
+				968A06620BE28101001F830D /* NSBezierPath+SourApps.m */,
+				968A06640BE28101001F830D /* NSImage+SourApps.h */,
+				968A06650BE28101001F830D /* NSImage+SourApps.m */,
 				968A06680BE28101001F830D /* NSURLConnection+FLVR.h */,
 				968A06690BE28101001F830D /* NSURLConnection+FLVR.m */,
 			);
@@ -347,9 +347,9 @@
 				F9BA950B0CE920DE008C77DE /* Toolbar.psd in Resources */,
 				F9BA950D0CE920DE008C77DE /* LICENSE in Resources */,
 				F9BA97100CE94B8F008C77DE /* MainMenu.nib in Resources */,
-				F9BA9C3C0CEA0613008C77DE /* drop_bg.png in Resources */,
-				F9BA9C9D0CEA0ACB008C77DE /* drop_icon.png in Resources */,
-				F9BA9C9F0CEA0AD3008C77DE /* drop_wait.png in Resources */,
+				F9D0331E0CEA2A2F009893BC /* drop_bg.png in Resources */,
+				F9D0331F0CEA2A2F009893BC /* drop_wait.png in Resources */,
+				F9D033200CEA2A2F009893BC /* drop_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,8 +360,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9BA950E0CE920F0008C77DE /* NSBezierPath+TastyApps.m in Sources */,
-				F9BA950F0CE920F0008C77DE /* NSImage+TastyApps.m in Sources */,
+				F9BA950E0CE920F0008C77DE /* NSBezierPath+SourApps.m in Sources */,
+				F9BA950F0CE920F0008C77DE /* NSImage+SourApps.m in Sources */,
 				F9BA95100CE920F0008C77DE /* NSURLConnection+FLVR.m in Sources */,
 				F9BA95150CE920F0008C77DE /* FLVRVideo.m in Sources */,
 				F9BA95160CE920F0008C77DE /* FLVRVideoInterceptor.m in Sources */,
@@ -442,6 +442,7 @@
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)\"";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

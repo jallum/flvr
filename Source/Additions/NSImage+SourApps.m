@@ -16,10 +16,10 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, 
  * USA.
  */
-#import "NSImage+TastyApps.h"
+#import "NSImage+SourApps.h"
 #import "CTGradient.h"
 
-@implementation NSImage (TastyApps)
+@implementation NSImage (SourApps)
 
 + (NSImage*) imageNamed:(NSString*)name forClass:(Class)inClass
 {
