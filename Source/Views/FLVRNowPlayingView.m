@@ -33,11 +33,12 @@
 
 - (id) initWithFrame:(NSRect)frame 
 {
-    if (self = [super initWithFrame:frame mode:NSTrackModeMatrix cellClass:[FLVRVideoCell class] numberOfRows:1 numberOfColumns:2]) {
+    if (self = [super initWithFrame:frame mode:NSTrackModeMatrix cellClass:[FLVRVideoCell class] numberOfRows:1 numberOfColumns:1]) {
         [self setCellSize:NSMakeSize(300, 130)];
         [self setIntercellSpacing:NSMakeSize(10, 10)];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_restartTracking) name:NSViewFrameDidChangeNotification object:self];
         mouseOverTag = -1;
+        videos = [[NSMutableArray alloc] init];
     }
     return self;
 }

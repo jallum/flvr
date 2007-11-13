@@ -5,30 +5,21 @@
 	<key>IBClasses</key>
 	<array>
 		<dict>
-			<key>ACTIONS</key>
-			<dict>
-				<key>clearAll</key>
-				<string>id</string>
-				<key>clearCompleted</key>
-				<string>id</string>
-				<key>close</key>
-				<string>id</string>
-				<key>visitTasty</key>
-				<string>id</string>
-			</dict>
 			<key>CLASS</key>
-			<string>FLVRNowPlayingWindowController</string>
+			<string>TossToController</string>
 			<key>LANGUAGE</key>
 			<string>ObjC</string>
 			<key>OUTLETS</key>
 			<dict>
-				<key>betaVersion</key>
-				<string>NSTextField</string>
-				<key>nowPlayingView</key>
+				<key>_nowPlayingView</key>
 				<string>FLVRNowPlayingView</string>
+				<key>_panel</key>
+				<string>NSPanel</string>
+				<key>_webView</key>
+				<string>WebView</string>
 			</dict>
 			<key>SUPERCLASS</key>
-			<string>NSWindowController</string>
+			<string>NSObject</string>
 		</dict>
 		<dict>
 			<key>CLASS</key>
@@ -40,17 +31,41 @@
 		</dict>
 		<dict>
 			<key>CLASS</key>
+			<string>NSApplication</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>SUPERCLASS</key>
+			<string>NSResponder</string>
+		</dict>
+		<dict>
+			<key>CLASS</key>
+			<string>DragDropTargetView</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>SUPERCLASS</key>
+			<string>NSView</string>
+		</dict>
+		<dict>
+			<key>CLASS</key>
+			<string>FirstResponder</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>SUPERCLASS</key>
+			<string>NSObject</string>
+		</dict>
+		<dict>
+			<key>CLASS</key>
 			<string>NSObject</string>
 			<key>LANGUAGE</key>
 			<string>ObjC</string>
 		</dict>
 		<dict>
 			<key>CLASS</key>
-			<string>FLVRNowPlayingPanel</string>
+			<string>NSScroller</string>
 			<key>LANGUAGE</key>
 			<string>ObjC</string>
 			<key>SUPERCLASS</key>
-			<string>NSPanel</string>
+			<string>NSControl</string>
 		</dict>
 		<dict>
 			<key>CLASS</key>
@@ -59,14 +74,6 @@
 			<string>ObjC</string>
 			<key>SUPERCLASS</key>
 			<string>NSMatrix</string>
-		</dict>
-		<dict>
-			<key>CLASS</key>
-			<string>FLVRBarButton</string>
-			<key>LANGUAGE</key>
-			<string>ObjC</string>
-			<key>SUPERCLASS</key>
-			<string>NSButton</string>
 		</dict>
 	</array>
 	<key>IBVersion</key>
