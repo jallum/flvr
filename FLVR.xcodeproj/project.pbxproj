@@ -36,7 +36,6 @@
 		F9BA95200CE92103008C77DE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		F9BA95420CE922DD008C77DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BA95410CE922DD008C77DE /* main.m */; };
 		F9BA958F0CE93447008C77DE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BA958E0CE93447008C77DE /* WebKit.framework */; };
-		F9BA97080CE94B49008C77DE /* Upload.nib in Resources */ = {isa = PBXBuildFile; fileRef = F9BA97070CE94B49008C77DE /* Upload.nib */; };
 		F9BA97100CE94B8F008C77DE /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = F9BA970F0CE94B8F008C77DE /* MainMenu.nib */; };
 		F9BA971E0CE94BA8008C77DE /* DragDropTargetView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BA97130CE94BA7008C77DE /* DragDropTargetView.m */; };
 		F9BA971F0CE94BA8008C77DE /* FLVR.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BA97150CE94BA7008C77DE /* FLVR.m */; };
@@ -89,7 +88,6 @@
 		F9BA94F40CE920CF008C77DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		F9BA95410CE922DD008C77DE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F9BA958E0CE93447008C77DE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
-		F9BA97070CE94B49008C77DE /* Upload.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = Upload.nib; sourceTree = "<group>"; };
 		F9BA970F0CE94B8F008C77DE /* MainMenu.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = MainMenu.nib; sourceTree = "<group>"; };
 		F9BA97120CE94BA7008C77DE /* DragDropTargetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragDropTargetView.h; sourceTree = "<group>"; };
 		F9BA97130CE94BA7008C77DE /* DragDropTargetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragDropTargetView.m; sourceTree = "<group>"; };
@@ -142,7 +140,6 @@
 				968A06A20BE28157001F830D /* defaults.plist */,
 				968A06AC0BE28157001F830D /* ffmpeg */,
 				F9BA970F0CE94B8F008C77DE /* MainMenu.nib */,
-				F9BA97070CE94B49008C77DE /* Upload.nib */,
 				F9BA94F40CE920CF008C77DE /* Info.plist */,
 			);
 			path = Resources;
@@ -340,7 +337,6 @@
 				F9BA950A0CE920DE008C77DE /* RevealInFinder.psd in Resources */,
 				F9BA950B0CE920DE008C77DE /* Toolbar.psd in Resources */,
 				F9BA950D0CE920DE008C77DE /* LICENSE in Resources */,
-				F9BA97080CE94B49008C77DE /* Upload.nib in Resources */,
 				F9BA97100CE94B8F008C77DE /* MainMenu.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
