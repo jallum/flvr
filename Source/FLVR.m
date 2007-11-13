@@ -104,20 +104,138 @@ static BOOL swapInstanceImplementations(Class aClass, SEL selA, SEL selB)
     [defaultCenter addObserver:self selector:@selector(_progress:) name:FLVRVideoEncodingNotification object:nil];
     [defaultCenter addObserver:self selector:@selector(_complete:) name:FLVRVideoCompleteNotification object:nil];
 	[defaultCenter addObserver:self selector:@selector(_urlsDropped:) name:@"UrlDropped" object:nil];
+    [defaultCenter addObserver:self selector:@selector(_webViewProgressStartedNotification:) name:WebViewProgressStartedNotification object:nil];
+    [defaultCenter addObserver:self selector:@selector(videoCompleted:) name:FLVRVideoCompleteNotification object:nil];
+  }
+
+- (void) revealInFinder:(FLVRVideo*)video
+{    
+    [[NSWorkspace sharedWorkspace] selectFile:[video fullPathToEncodedFile] inFileViewerRootedAtPath:@""];
+}
+
+- (void) addToiTunes:(FLVRVideo*)video
+{
+    NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+    CFURLRef url = CFURLCreateWithFileSystemPath(NULL, (CFStringRef)[video fullPathToEncodedFile], kCFURLPOSIXPathStyle, NO);
+    CFStringRef path = CFURLCopyFileSystemPath(url, kCFURLHFSPathStyle);
+    NSString* script = [NSString stringWithFormat:
+        @"ignoring application responses\n"
+        @"    tell application \"iTunes\" to add (\"%@\" as alias) to library playlist 1\n"
+        @"end ignoring\n",
+        path
+    ];
+    CFRelease(path);
+    CFRelease(url);
+    NSDictionary* error = nil;
+    @try {
+//        NSLog(@"%@", script);
+        [[[[NSAppleScript alloc] initWithSource:script] autorelease] executeAndReturnError:&error];
+    } @catch (NSException* e) {
+        NSLog(@"result: %@", e);
+    }
+    NSLog(@"result: %@", error);
+    [pool release];
+}
+
+- (void) sendToGrowl:(FLVRVideo*)video
+{
+    NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+    NSDictionary* error = nil;
+    NSAppleEventDescriptor* value = nil;
+
+    @try {
+        NSString* checkScript = [NSString stringWithFormat:
+            @"tell application \"System Events\" to return count of (every process whose name is \"GrowlHelperApp\") > 0\n"
+        ];
+        NSLog(@"%@", checkScript);
+        value = [[[[NSAppleScript alloc] initWithSource:checkScript] autorelease] executeAndReturnError:&error];
+        if (!error && value && [value booleanValue]) {
+            NSMutableString* name = [[[video filename] mutableCopy] autorelease]; 
+            [name replaceOccurrencesOfString:@"\\" withString:@"\\\\" options:NSAnchoredSearch range:NSMakeRange(0, [name length])];
+            [name replaceOccurrencesOfString:@"\"" withString:@"\\\"" options:NSAnchoredSearch range:NSMakeRange(0, [name length])];
+            NSString* script = [NSString stringWithFormat:
+                @"ignoring application responses\n"
+                @"    tell application \"GrowlHelperApp\"\n"
+                @"        set notification to \"Video Download Complete\"\n"
+                @"        register as application \"FLVR\" all notifications {notification} default notifications {notification}\n"
+                @"        notify with name notification title \"%@\" description \"%@\" application name \"FLVR\" image from location \"%@\"\n"
+                @"    end tell\n"
+                @"end ignoring\n",
+                FLVRLocalizedString(@"Video Download Complete", @""),
+                name,
+                [NSURL fileURLWithPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"FLVR" ofType:@"icns"]]
+            ];
+            @try {
+//                NSLog(@"%@", script);
+                [[[[NSAppleScript alloc] initWithSource:script] autorelease] executeAndReturnError:&error];
+            } @catch (NSException* e) {
+                NSLog(@"exception: %@", e);
+            }
+            NSLog(@"result: %@", error);
+        }
+    } @catch (NSException* e) {
+        NSLog(@"exception: %@", e);
+    }
+    [pool release];
+}
+
+- (void) videoCompleted:(NSNotification*)notification
+{
+    FLVRVideo* video = [notification object];
+
+    NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults synchronize];
+    NSDictionary* options = [userDefaults persistentDomainForName:@"com.tastyapps.flvr"];
+
+    @try {
+        id value = [options objectForKey:@"flvr.addToiTunes"];
+        if (value && [value boolValue]) {
+            [self performSelector:@selector(addToiTunes:) withObject:video afterDelay:0.1];
+        }
+    } @catch (NSException* e) {
+        NSLog(@"videoCompleted: %@", e);
+    }
+
+    @try {
+        id value = [options objectForKey:@"flvr.sendToGrowl"];
+        if (value && [value boolValue]) {
+            [self performSelector:@selector(sendToGrowl:) withObject:video afterDelay:0.1];
+        }
+    } @catch (NSException* e) {
+        NSLog(@"videoCompleted: %@", e);
+    }
 }
 
 @end
 
 @implementation TossToController (Private)
 
+- (void) _cancel:(id)sender
+{
+    NSLog(@"cancel");
+    [_dropTargetView setHidden:NO];
+    [_waitASecView setHidden:YES];
+    [_progressIndicator stopAnimation:nil];
+    [_webView stopLoading:nil];
+}
+
 - (void) _registeredVideo:(NSNotification*)notification
 {
     [_nowPlayingView addVideo:[notification object]];
+
+    [_dropTargetView setHidden:NO];
+    [_waitASecView setHidden:YES];
+    [_progressIndicator stopAnimation:nil];
+    if (_videoTimer) {
+        [_videoTimer invalidate];
+        [_videoTimer release];
+        _videoTimer = nil;
+    }
 }
 
 - (void) _unregisteredVideo:(NSNotification*)notification
 {
-        [_nowPlayingView removeVideo:[notification object]];
+    [_nowPlayingView removeVideo:[notification object]];
 }
 
 - (void) _progress:(NSNotification*)notification
@@ -128,6 +246,14 @@ static BOOL swapInstanceImplementations(Class aClass, SEL selA, SEL selB)
 - (void) _complete:(NSNotification*)notification
 {
     [_nowPlayingView updateCellForVideo:[notification object]];
+}
+
+- (void) _webViewProgressStartedNotification:(NSNotification*)notification
+{
+    [_dropTargetView setHidden:YES];
+    [_waitASecView setHidden:NO];
+    [_progressIndicator startAnimation:nil];
+    _videoTimer = [[NSTimer timerWithTimeInterval:30.0 target:self selector:@selector(_cancel:) userInfo:nil repeats:NO] retain];
 }
 
 @end

@@ -136,8 +136,9 @@ static NSMutableDictionary* registry;
     }
     if (video) {
         [video _processData:data];
+    } else {
+        [delegate connection:connection didReceiveData:data lengthReceived:length];
     }
-    [delegate connection:connection didReceiveData:data lengthReceived:length];
 }
 
 - (void) connection:(NSURLConnection*)connection willStopBufferingData:(NSData*)data

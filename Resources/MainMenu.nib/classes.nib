@@ -11,10 +11,16 @@
 			<string>ObjC</string>
 			<key>OUTLETS</key>
 			<dict>
+				<key>_dropTargetView</key>
+				<string>NSView</string>
 				<key>_nowPlayingView</key>
 				<string>FLVRNowPlayingView</string>
 				<key>_panel</key>
 				<string>NSPanel</string>
+				<key>_progressIndicator</key>
+				<string>NSProgressIndicator</string>
+				<key>_waitASecView</key>
+				<string>NSView</string>
 				<key>_webView</key>
 				<string>WebView</string>
 			</dict>
@@ -55,17 +61,17 @@
 		</dict>
 		<dict>
 			<key>CLASS</key>
-			<string>NSObject</string>
-			<key>LANGUAGE</key>
-			<string>ObjC</string>
-		</dict>
-		<dict>
-			<key>CLASS</key>
 			<string>NSScroller</string>
 			<key>LANGUAGE</key>
 			<string>ObjC</string>
 			<key>SUPERCLASS</key>
 			<string>NSControl</string>
+		</dict>
+		<dict>
+			<key>CLASS</key>
+			<string>NSObject</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
 		</dict>
 		<dict>
 			<key>CLASS</key>

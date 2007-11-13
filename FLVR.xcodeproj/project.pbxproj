@@ -40,6 +40,9 @@
 		F9BA971E0CE94BA8008C77DE /* DragDropTargetView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BA97130CE94BA7008C77DE /* DragDropTargetView.m */; };
 		F9BA971F0CE94BA8008C77DE /* FLVR.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BA97150CE94BA7008C77DE /* FLVR.m */; };
 		F9BA97830CE94CCF008C77DE /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BA97820CE94CCF008C77DE /* AddressBook.framework */; };
+		F9BA9C3C0CEA0613008C77DE /* drop_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F9BA9C3B0CEA0613008C77DE /* drop_bg.png */; };
+		F9BA9C9D0CEA0ACB008C77DE /* drop_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F9BA9C9C0CEA0ACB008C77DE /* drop_icon.png */; };
+		F9BA9C9F0CEA0AD3008C77DE /* drop_wait.png in Resources */ = {isa = PBXBuildFile; fileRef = F9BA9C9E0CEA0AD3008C77DE /* drop_wait.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +97,9 @@
 		F9BA97140CE94BA7008C77DE /* FLVR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLVR.h; sourceTree = "<group>"; };
 		F9BA97150CE94BA7008C77DE /* FLVR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLVR.m; sourceTree = "<group>"; };
 		F9BA97820CE94CCF008C77DE /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = /System/Library/Frameworks/AddressBook.framework; sourceTree = "<absolute>"; };
+		F9BA9C3B0CEA0613008C77DE /* drop_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drop_bg.png; sourceTree = "<group>"; };
+		F9BA9C9C0CEA0ACB008C77DE /* drop_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drop_icon.png; sourceTree = "<group>"; };
+		F9BA9C9E0CEA0AD3008C77DE /* drop_wait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drop_wait.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +220,9 @@
 		9655AF3A0BE33F2D00B24313 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F9BA9C3B0CEA0613008C77DE /* drop_bg.png */,
+				F9BA9C9C0CEA0ACB008C77DE /* drop_icon.png */,
+				F9BA9C9E0CEA0AD3008C77DE /* drop_wait.png */,
 				968A06AD0BE28157001F830D /* FLVR.icns */,
 				968A069C0BE28157001F830D /* Cancel.png */,
 				968A06A30BE28157001F830D /* Download.png */,
@@ -338,6 +347,9 @@
 				F9BA950B0CE920DE008C77DE /* Toolbar.psd in Resources */,
 				F9BA950D0CE920DE008C77DE /* LICENSE in Resources */,
 				F9BA97100CE94B8F008C77DE /* MainMenu.nib in Resources */,
+				F9BA9C3C0CEA0613008C77DE /* drop_bg.png in Resources */,
+				F9BA9C9D0CEA0ACB008C77DE /* drop_icon.png in Resources */,
+				F9BA9C9F0CEA0AD3008C77DE /* drop_wait.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
