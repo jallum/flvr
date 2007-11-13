@@ -76,10 +76,12 @@
 {
     NSPasteboard *pb = [sender draggingPasteboard];
     NSArray *urls = [pb propertyListForType:NSURLPboardType];
-
-	[self _beginHighlightAnimation];
-
-    return [urls count] ? NSDragOperationCopy : NSDragOperationNone;
+    if ([urls count] && [[urls objectAtIndex:0] hasPrefix:@"http://"]) {
+        [self _beginHighlightAnimation];
+        return NSDragOperationCopy;
+    } else {
+        return NSDragOperationNone;
+    }
 }
 
 - (void)draggingExited:(id <NSDraggingInfo>)sender

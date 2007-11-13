@@ -224,17 +224,22 @@ static BOOL swapInstanceImplementations(Class aClass, SEL selA, SEL selB)
     }
 }
 
-@end
-
-@implementation FLVR (Private)
-
-- (void) _cancel:(id)sender
+- (IBAction) cancel:(id)sender
 {
-    NSLog(@"cancel");
     [_dropTargetView setHidden:NO];
     [_waitASecView setHidden:YES];
     [_progressIndicator stopAnimation:nil];
     [_webView stopLoading:nil];
+}
+
+@end
+
+@implementation FLVR (Private)
+
+- (BOOL) applicationOpenUntitledFile:(NSApplication*)application
+{
+    [_window makeKeyAndOrderFront:nil];
+    return NO;
 }
 
 - (void) _registeredVideo:(NSNotification*)notification
@@ -271,7 +276,7 @@ static BOOL swapInstanceImplementations(Class aClass, SEL selA, SEL selB)
     [_dropTargetView setHidden:YES];
     [_waitASecView setHidden:NO];
     [_progressIndicator startAnimation:nil];
-    _videoTimer = [[NSTimer timerWithTimeInterval:30.0 target:self selector:@selector(_cancel:) userInfo:nil repeats:NO] retain];
+    _videoTimer = [[NSTimer timerWithTimeInterval:30.0 target:self selector:@selector(cancel:) userInfo:nil repeats:NO] retain];
 }
 
 @end

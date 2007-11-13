@@ -22,7 +22,7 @@
 @class FLVRNowPlayingView;
 
 @interface FLVR : NSObject {
-	IBOutlet NSPanel* _panel;
+	IBOutlet NSWindow* _window;
     IBOutlet WebView* _webView;
 	IBOutlet FLVRNowPlayingView* _nowPlayingView;
     IBOutlet NSView* _waitASecView;
@@ -33,6 +33,8 @@
 	NSStatusItem* _statusItem;
 	BOOL _downloadImmediately;
 }
+
+- (IBAction) cancel:(id)sender;
 
 @end
 
