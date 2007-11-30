@@ -19,7 +19,7 @@
 	<key>CFBundleSignature</key>
 	<string>SOUR</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>2.2</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
