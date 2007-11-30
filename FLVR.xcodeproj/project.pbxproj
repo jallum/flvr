@@ -399,6 +399,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = FLVR;
+				VALID_ARCHS = "ppc64 ppc7400 ppc970 i386 x86_64 ppc";
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
 			};
@@ -407,6 +408,10 @@
 		F9BA94F60CE920D0008C77DE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					i386,
+					ppc,
+				);
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -432,6 +437,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = FLVR;
+				VALID_ARCHS = "ppc64 ppc7400 ppc970 i386 x86_64 ppc";
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
 			};

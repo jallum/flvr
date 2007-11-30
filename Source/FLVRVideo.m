@@ -322,7 +322,7 @@ static NSArray* extensionsToStrip;
 
     NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults synchronize];
-	NSDictionary* options = [userDefaults persistentDomainForName:@"com.tastyapps.flvr"];
+	NSDictionary* options = [userDefaults persistentDomainForName:@"com.sourapps.flvr"];
 	NSFileManager* fileManager = [NSFileManager defaultManager];
 	
 	/*  Check that the format is one we support.
@@ -537,7 +537,7 @@ static NSArray* extensionsToStrip;
                 MDItemSetAttribute(
                     item, 
                     kMDItemEncodingApplications,
-                    [NSArray arrayWithObjects:@"TastyApps FLVR", nil]
+                    [NSArray arrayWithObjects:@"SourApps FLVR", nil]
                 );
                 CFRelease(item);
             }

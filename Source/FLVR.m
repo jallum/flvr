@@ -102,16 +102,16 @@ static BOOL swapInstanceImplementations(Class aClass, SEL selA, SEL selB)
 	 */
     NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
     NSDictionary* defaults = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"defaults" ofType:@"plist"]];
-    [userDefaults addSuiteNamed:@"com.tastyapps.flvr"];    
+    [userDefaults addSuiteNamed:@"com.sourapps.flvr"];    
     [userDefaults registerDefaults:defaults];
-    NSDictionary* existing = [userDefaults persistentDomainForName:@"com.tastyapps.flvr"];
+    NSDictionary* existing = [userDefaults persistentDomainForName:@"com.sourapps.flvr"];
     if (existing) {
         NSMutableDictionary* combined = [defaults mutableCopy];
         [combined addEntriesFromDictionary:existing];
-        [userDefaults setPersistentDomain:combined forName:@"com.tastyapps.flvr"];
+        [userDefaults setPersistentDomain:combined forName:@"com.sourapps.flvr"];
         [combined release];
     } else {
-        [userDefaults setPersistentDomain:defaults forName:@"com.tastyapps.flvr"];
+        [userDefaults setPersistentDomain:defaults forName:@"com.sourapps.flvr"];
     }
     [userDefaults synchronize];
 
@@ -203,7 +203,7 @@ static BOOL swapInstanceImplementations(Class aClass, SEL selA, SEL selB)
 
     NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults synchronize];
-    NSDictionary* options = [userDefaults persistentDomainForName:@"com.tastyapps.flvr"];
+    NSDictionary* options = [userDefaults persistentDomainForName:@"com.sourapps.flvr"];
 
     @try {
         id value = [options objectForKey:@"flvr.addToiTunes"];
